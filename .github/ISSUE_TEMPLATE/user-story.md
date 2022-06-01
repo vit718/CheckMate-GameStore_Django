@@ -7,4 +7,4 @@ assignees: ''
 
 ---
 
-As a ** **, I would like to ** **, so I can ** **.
+As a ****, I would like to ****, so I can ****.
