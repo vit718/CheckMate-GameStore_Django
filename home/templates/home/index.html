@@ -11,17 +11,67 @@
 {% endblock %}
 
 {% block content %}
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 logo-font text-black">
-            </h1>
-            <div class="my-5">
-                <h4>
-                    <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                </h4>
+<div class="w-100 p-3">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container carousel-container h-100 py-3">
+                <div class="text-center">
+                    <h1 id="carousel-main-1" class="text-background display-4">
+                        All your favorite board games
+                    </h1>
+                </div>
+                <div class="text-center">
+                    <p id="carousel-main-2" class="text-background display-4">
+                        in one place
+                    </p>
+                </div>
+                <div class="my-5">
+                    <h4 id="h4-btn">
+                        <a href="" id="shop-now-btn" class="btn shop-action-btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                    </h4>
+                </div>
             </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container carousel-container h-100 py-3 text-center">
+                <h1 class="text-background display-5 text-black">
+                    On Sale!
+                </h1>
+                <div class="my-5">
+                    <h4 id="h4-btn">
+                        <a href="" class="btn shop-action-btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                    </h4>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container carousel-container h-100 py-3 text-center">
+                <h1 class="display-5 text-black text-background">
+                    Recently Added!
+                </h1>
+                <div class="my-5">
+                    <h4 id="h4-btn">
+                        <a href="" class="btn shop-action-btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                    </h4>
+                </div>
+            </div>
+          </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
     </div>
 </div>
+
 {% endblock %}

@@ -15,8 +15,8 @@
 
     <!-- Bootstrap CSS -->
     {% block corecss %}
-        <script src="https://kit.fontawesome.com/56dd7abce3.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -24,7 +24,8 @@
 
     <!-- jquery script -->
     {% block corejs %}
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/56dd7abce3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     {% endblock %}
@@ -32,22 +33,22 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Game Store {% block extra_title %}{% endblock %}</title>
+    <title>CheckMate Game Store {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div class="row">
+        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font my-0">Game Store</h2>
+                <a href="{% url 'home' %}" class="nav-link">
+                    <img id="logo-img" src="/media/logo.png" alt="Store Logo">
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                        <input class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <button class="form-control btn border rounded-0" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -59,7 +60,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link text-dark" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fa-solid fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
@@ -79,7 +80,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link" href="">
                             <div class="text-center">
                                 <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
                                 <p class="my-0">
@@ -110,5 +111,29 @@
     {% block postloadjs %}
     {% endblock %}
 
+    <footer class="fixed-bottom py-3 text-center">
+        <div id="footer" class="mt-auto text-center"> 
+            <div>
+                <p>Follow Us</p>
+            </div>
+            <div>
+                <a class="text-dark" href="https://www.facebook.com/" target="_blank" rel="noopener"
+                    aria-label="visit our Facebook page (opens in a new page)"><i class="fab fa-facebook-square fa-2xl"></i></a>
+                <a class="text-dark" href="https://twitter.com/" target="_blank" rel="noopener"
+                    aria-label="visit our Twitter page (opens in a new page)"><i class="fab fa-twitter-square fa-2xl"></i></a>
+                <a class="text-dark" href="https://www.instagram.com/" target="_blank" rel="noopener"
+                    aria-label="visit our Instgram page (opens in a new page)"><i class="fab fa-instagram-square fa-2xl"></i></a>
+            </div>
+        </div>
+        <div id="footer" class="mt-auto text-center">
+            <div>
+                <a class="text-dark" href="">Privacy Policy</a>
+            </div>
+            <div>
+                <a class="text-dark" href="">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/base.js' %}"></script>
   </body>
 </html>
