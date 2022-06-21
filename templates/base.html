@@ -37,7 +37,7 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+        <div id="topnav" class="row backg-light pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link">
                     <img id="logo-img" src="/media/logo.png" alt="Store Logo">
@@ -96,6 +96,15 @@
                 </ul>
             </div>
         </div>
+        <div class="row">	
+            <nav class="navbar backg-light navbar-expand-lg navbar-light w-100">	
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">	
+                    <span class="navbar-toggler-icon"></span>	
+                </button>	
+                {% include 'includes/mobile-top-header.html' %}	
+                {% include 'includes/main-nav.html' %}	
+            </nav>	
+        </div>	
     </header>
 
     {% if messages %}
@@ -111,29 +120,36 @@
     {% block postloadjs %}
     {% endblock %}
 
+    <!-- Footer -->
     <footer class="fixed-bottom py-3 text-center">
-        <div id="footer" class="mt-auto text-center"> 
-            <div>
-                <p>Follow Us</p>
+        <div class="d-none d-lg-block">
+            <div id="footer-links" class="text-center float-left">
+                <div>
+                    <a class="text-dark footer-font-size" href="">Privacy Policy</a>
+                </div>
+                <div>
+                    <a class="text-dark footer-font-size" href="">Contact Us</a>
+                </div>
             </div>
-            <div>
-                <a class="text-dark" href="https://www.facebook.com/" target="_blank" rel="noopener"
-                    aria-label="visit our Facebook page (opens in a new page)"><i class="fab fa-facebook-square fa-2xl"></i></a>
-                <a class="text-dark" href="https://twitter.com/" target="_blank" rel="noopener"
-                    aria-label="visit our Twitter page (opens in a new page)"><i class="fab fa-twitter-square fa-2xl"></i></a>
-                <a class="text-dark" href="https://www.instagram.com/" target="_blank" rel="noopener"
-                    aria-label="visit our Instgram page (opens in a new page)"><i class="fab fa-instagram-square fa-2xl"></i></a>
+            <div class="mx-auto">
+                <div id="footer-icons" class="text-center"> 
+                    <div>
+                        <p class="footer-font-size">Follow Us:</p>
+                    </div>
+                    <div>
+                        <a class="text-dark" href="https://www.facebook.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our Facebook page (opens in a new page)"><i class="fab fa-facebook-square fa-3x"></i></a>
+                        <a class="text-dark" href="https://twitter.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our Twitter page (opens in a new page)"><i class="fab fa-twitter-square fa-3x"></i></a>
+                        <a class="text-dark" href="https://www.instagram.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our Instagram page (opens in a new page)"><i class="fab fa-instagram-square fa-3x"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="footer" class="mt-auto text-center">
-            <div>
-                <a class="text-dark" href="">Privacy Policy</a>
-            </div>
-            <div>
-                <a class="text-dark" href="">Contact Us</a>
-            </div>
-        </div>
+        {% include 'includes/mobile-footer.html' %}	
     </footer>
+
     <script src="{% static 'js/base.js' %}"></script>
   </body>
 </html>

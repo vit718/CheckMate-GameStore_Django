@@ -1,4 +1,6 @@
+/* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap');
+
 html {
     height: 100%;
 }
@@ -15,16 +17,12 @@ body {
     width: 80px;
 }
 
-#topnav {
+.backg-light {
     background-color: #E6F4F1;
 }
 
 .carousel-container {
     background-color: rgba(128, 128, 128, 0.336);
-}
-
-#shop-now-btn {
-    opacity: 0;
 }
 
 .shop-action-btn {
@@ -33,8 +31,12 @@ body {
     min-width: 260px;
 }
 
-.shop-action-btn:hover {
+.hover-white:hover {
     color: white;
+}
+
+.hover-bigger:hover {
+    font-size: large;
 }
 
 .text-background {
@@ -44,7 +46,7 @@ body {
     padding-right: 15px;
 }
 
-#h4-btn {
+#corousel-btn {
     text-align: center;
 }
 
@@ -53,7 +55,7 @@ body {
 }
 
 .text-dark {
-    color #002F33;
+    color: #002F33 !important;
 }
 
 #carousel-main-1, #carousel-main-2 {
@@ -63,16 +65,31 @@ body {
     background-color: #5da3a6;
 }
 
+#shop-now-btn {
+    opacity: 0;
+}
+
+/* Footer */
+
+.footer-font-size {
+    font-size: 1.2rem;
+}
+
 footer {
     background-color: #E6F4F1;
 }
 
-#footer {
+#footer-icons {
     display: inline-block;
     padding: 0 25px;
 }
 
-#footer p {
+#footer-links {
+    padding-left: 31%;
+    padding-top: 10px;
+}
+
+#footer-icons p {
     margin-bottom: 0;
 }
 

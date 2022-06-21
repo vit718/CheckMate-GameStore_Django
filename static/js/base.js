@@ -1,4 +1,6 @@
 
+// Animate contents of carousel
+
 $("#carousel-main-1").delay(1500).animate({"opacity": "1"}, 700);
 
 $("#carousel-main-2").delay(2500).animate({"opacity": "1"}, 700);
