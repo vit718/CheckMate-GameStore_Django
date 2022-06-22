@@ -17,15 +17,13 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    min_players = models.DecimalField(max_digits=2, decimal_places=0, null=True, blank=True )
-    max_players = models.DecimalField(max_digits=2, decimal_places=0, null=True, blank=True)
-    min_age = models.DecimalField(max_digits=2, decimal_places=0, null=True, blank=True)
-    rating = models.DecimalField(max_digits=2, decimal_places=1, null=True, blank=True)
-    avg_play_time = models.DecimalField(max_digits=2, decimal_places=0, null=True, blank=True)
+    min_players = models.PositiveSmallIntegerField(null=True, blank=True)
+    max_players = models.PositiveSmallIntegerField(null=True, blank=True)
+    min_age = models.PositiveSmallIntegerField(null=True, blank=True)
+    avg_rating = models.FloatField(default=0)
+    play_time = models.PositiveSmallIntegerField(null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.name
-    
-
