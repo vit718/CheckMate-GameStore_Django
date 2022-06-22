@@ -12,12 +12,21 @@ body {
     font-family: 'Roboto Flex', sans-serif;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .text-black {
     color: black;
 }
 
 .text-dark {
     color: #002F33 !important;
+}
+
+.bigger-font-size {
+    font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
 /* Navbar */
@@ -70,11 +79,6 @@ body {
 }
 
 /* Footer */
-
-.footer-font-size {
-    font-size: 1.2rem;
-    margin-bottom: 0;
-}
 
 #footer {
     background-color: #E6F4F1;
