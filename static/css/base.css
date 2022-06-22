@@ -12,6 +12,16 @@ body {
     font-family: 'Roboto Flex', sans-serif;
 }
 
+.text-black {
+    color: black;
+}
+
+.text-dark {
+    color: #002F33 !important;
+}
+
+/* Navbar */
+
 #logo-img {
     height: 80px;
     width: 80px;
@@ -20,6 +30,8 @@ body {
 .backg-light {
     background-color: #E6F4F1;
 }
+
+/* Home page carousel */
 
 .carousel-container {
     background-color: rgba(128, 128, 128, 0.336);
@@ -35,10 +47,6 @@ body {
     color: white;
 }
 
-.hover-bigger:hover {
-    font-size: large;
-}
-
 .text-background {
     background-color: #5da3a6;
     display: inline-block;
@@ -48,14 +56,6 @@ body {
 
 #corousel-btn {
     text-align: center;
-}
-
-.text-black {
-    color: black;
-}
-
-.text-dark {
-    color: #002F33 !important;
 }
 
 #carousel-main-1, #carousel-main-2 {
@@ -73,24 +73,24 @@ body {
 
 .footer-font-size {
     font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
-footer {
+#footer {
     background-color: #E6F4F1;
 }
 
-#footer-icons {
-    display: inline-block;
-    padding: 0 25px;
-}
-
 #footer-links {
-    padding-left: 31%;
     padding-top: 10px;
 }
 
 #footer-icons p {
     margin-bottom: 0;
+}
+
+.float-container {
+    width: 50%;
+    float: left;
 }
 
 /* -------------------------------- Media Queries
@@ -115,4 +115,17 @@ footer {
     .header-container {
         padding-top: 164px;
     }
+}
+
+/* Adjust footer size for small screens */
+@media (max-width: 992px) {
+
+    #footer-links {
+        padding-top: 0;
+    }
+
+    .footer-font-size {
+        font-size: 1rem;
+    }
+
 }
