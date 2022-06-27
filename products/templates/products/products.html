@@ -13,19 +13,21 @@
 {% block content %}
 
 <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="text-dark">Products</h2>
-                <hr class="w-50 mb-1">
-            </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="text-dark">Products</h2>
+            <hr class="w-50 mb-1">
         </div>
-        <div class="row">
+    </div>
+    <div class="row">
         <div class="col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
-            <div class="row">
+            <div class="products-row row">
                 {% for product in products %}
-                    <div class="col-sm-6 col-md-6 col-lg-3 col-xl-2">
+
+                <div class="col-sm-6 my-auto col-md-6 col-lg-3 col-xl-2">
+                    <div class="card h-100 border-0">
                         {% if product.image %}
                         <a href="">
                             <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -36,14 +38,54 @@
                         </a>
                         {% endif %}
                     </div>
-                    <div class="text-center text-dark col-sm-6 col-md-6 col-lg-3 col-xl-2">
-                        <p>Some text</p>
+                </div>
+                <div class="text-center mb-5 text-dark col-sm-6 col-md-6 col-lg-3 col-xl-2">
+                    <div class="card h-100 border-0">
+                        <h3 class="display-5 my-auto pb-2">{{ product.name }}</h3>
+                        <div>
+                            <p class="d-inline mr-1 card ">Age: {{ product.min_age }}+</p>
+                            {% if product.min_players %}
+                            <p class="d-inline mr-1 card"><i class="fa-solid fa-person"></i>
+                                {{ product.min_players }}-{{ product.max_players }}</p>
+                            {% endif %}
+                            {% if product.play_time %}
+                            <p class="d-inline card"><i class="fa-regular fa-clock"></i> {{ product.play_time }} min</p>
+                            {% endif %}
+                        </div>
+                        <div class="mt-2">
+                            {% if product.avg_rating %}
+                            <p class="d-inline"><i class="star-icon fa-regular fa-star"></i>:{{ product.avg_rating }} <a
+                                    href="" class="btn reviews-btn">Reviews</a></p>
+                            {% else %}
+                            <p class="d-inline"><i class="star-icon fa-solid fa-star"></i> <a href=""
+                                    class="btn reviews-btn"> No Reviews</a></p>
+                            {% endif %}
+                        </div>
+                        <div class="mt-2">
+                            <p><strong>&euro;{{ product.price }}</strong></p>
+                            <a href="" class="btn hover-white add-to-cart-btn">ADD TO CART</a>
+                        </div>
                     </div>
+                </div>
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-lg-none my-3">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-lg-block d-xl-none my-3">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-xl-block my-3">
+                    <hr>
+                </div>
+                {% endif %}
+
                 {% endfor %}
             </div>
         </div>
-    </div>
-        
     </div>
 </div>
 

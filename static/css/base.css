@@ -78,6 +78,40 @@ a:hover {
     opacity: 0;
 }
 
+/* Products page */
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+.products-row {
+    padding-bottom: 120px;
+}
+
+.reviews-btn {
+    color: #5da3a6;
+    font-weight: 700;
+}
+
+.reviews-btn:hover {
+    color:#002F33;
+}
+
+.star-icon {
+    color: rgba(255, 217, 0, 0.863);
+}
+
+.add-to-cart-btn {
+    background: #002F33;
+    color: #5da3a6;
+}
+
 /* Footer */
 
 #footer {
@@ -97,23 +131,11 @@ a:hover {
     float: left;
 }
 
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-}
-
 /* -------------------------------- Media Queries
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
-    }
+  
 }
   
 /* fixed top navbar only on medium and up */
