@@ -18,7 +18,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="text-dark">Products</h2>
+            <h2 class="text-dark">Product Details</h2>
             <hr class="w-50 mb-1">
         </div>
     </div>
@@ -26,26 +26,26 @@
         <div class="col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
             <div class="products-row row">
-                <!-- Iterates through Products -->
-                {% for product in products %}
                 <!-- Product Image -->
-                <div class="col-sm-6 my-auto col-md-6 col-lg-3 col-xl-2">
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                     <div class="card h-100 border-0">
                         {% if product.image %}
-                        <a href="{% url 'product_detail' product.id %}">
+                        <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
-                        <a href="{% url 'product_detail' product.id %}">
+                        <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
                         {% endif %}
                     </div>
                 </div>
+
                 <!-- Product information card -->
-                <div class="text-center mb-5 text-dark col-sm-6 col-md-6 col-lg-3 col-xl-2">
+                
+                <div class="text-center text-dark col-12 col-md-6 col-lg-4">
                     <div class="card h-100 border-0">
-                        <h3 class="display-5 my-auto pb-2">{{ product.name }}</h3>
+                        <h3 class="display-5 pb-2">{{ product.name }}</h3>
                         <div>
                             <p class="d-inline mr-1 card ">Age: {{ product.min_age }}+</p>
                             {% if product.min_players %}
@@ -65,30 +65,16 @@
                                     class="btn reviews-btn"> No Reviews</a></p>
                             {% endif %}
                         </div>
+
+                        <div>
+                            <p>{{ product.description }}</p>
+                        </div>
                         <div class="mt-2">
                             <p><strong>&euro;{{ product.price }}</strong></p>
                             <a href="" class="btn hover-white add-to-cart-btn">ADD TO CART</a>
                         </div>
                     </div>
                 </div>
-                <!-- A responsive hr at the bottom of each products row -->
-                {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-lg-none my-3">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-lg-block d-xl-none my-3">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-xl-block my-3">
-                    <hr>
-                </div>
-                {% endif %}
-
-                {% endfor %}
             </div>
         </div>
     </div>
