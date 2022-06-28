@@ -95,6 +95,10 @@ a:hover {
 	z-index: -1;
 }
 
+.sort-select-border {
+    border-color: #002F33 !important;
+}
+
 .products-row {
     padding-bottom: 120px;
 }
@@ -120,6 +124,18 @@ a:hover {
 .category-badge {
     border-color: #002F33 !important;
     background-color: #E6F4F1;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+}
+
+.btt-link {
+    cursor: pointer;
 }
 
 /* Footer */
