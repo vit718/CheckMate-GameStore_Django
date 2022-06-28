@@ -117,6 +117,11 @@ a:hover {
     color: #5da3a6;
 }
 
+.category-badge {
+    border-color: #002F33 !important;
+    background-color: #E6F4F1;
+}
+
 /* Footer */
 
 #footer {
