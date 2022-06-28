@@ -41,6 +41,10 @@ a:hover {
     background-color: #E6F4F1;
 }
 
+.dropdown-item, .dropdown-menu {
+    background-color: #E6F4F1;
+}
+
 /* Home page carousel */
 
 .carousel-container {
