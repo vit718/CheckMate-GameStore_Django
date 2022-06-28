@@ -5,9 +5,9 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=avg_rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -17,11 +17,11 @@
                 Board Games
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="board-games-link">
-                <a href="" class="dropdown-item">Family</a>
-                <a href="" class="dropdown-item">Strategy</a>
-                <a href="" class="dropdown-item">Party</a>
-                <a href="" class="dropdown-item">Classic</a>
-                <a href="" class="dropdown-item">All Board Games</a>
+                <a href="{% url 'products' %}?category=family" class="dropdown-item">Family</a>
+                <a href="{% url 'products' %}?category=strategy" class="dropdown-item">Strategy</a>
+                <a href="{% url 'products' %}?category=party" class="dropdown-item">Party</a>
+                <a href="{% url 'products' %}?category=classic" class="dropdown-item">Classic</a>
+                <a href="{% url 'products' %}?category=family,strategy,party,classic" class="dropdown-item">All Board Games</a>
             </div>
         </li>
 
@@ -30,9 +30,9 @@
                 Role-Playing
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="role-playing-link">
-                <a href="" class="dropdown-item">Dungeons & Dragons</a>
-                <a href="" class="dropdown-item">Pathfinder</a>
-                <a href="" class="dropdown-item">All Role-Playing Games</a>
+                <a href="{% url 'products' %}?category=d_and_d" class="dropdown-item">Dungeons & Dragons</a>
+                <a href="{% url 'products' %}?category=pathfinder" class="dropdown-item">Pathfinder</a>
+                <a href="{% url 'products' %}?category=d_and_d,pathfinder" class="dropdown-item">All Role-Playing Games</a>
             </div>
         </li>
 
