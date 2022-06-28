@@ -1,6 +1,7 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap');
 
+/* All Pages */
 html {
     height: 100%;
 }
@@ -135,7 +136,9 @@ a:hover {
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  
+    #topnav {
+        padding: 0 5%;
+    }
 }
   
 /* fixed top navbar only on medium and up */
@@ -155,6 +158,10 @@ a:hover {
 
     .footer-font-size {
         font-size: 1rem;
+    }
+
+    .header-container {
+        padding-top: 80px;
     }
 
 }

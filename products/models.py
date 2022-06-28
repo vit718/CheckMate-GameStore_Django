@@ -1,8 +1,13 @@
+""" Imported Models"""
 from django.db import models
 
-class Category(models.Model):
 
+class Category(models.Model):
+    """
+    A Class for the Products Categories
+    """
     class Meta:
+        """ Creates a Friendly name """
         verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=254)
@@ -16,6 +21,9 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """
+    A class for the Products
+    """
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
