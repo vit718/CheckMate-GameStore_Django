@@ -79,8 +79,16 @@ a:hover {
     background-color: #5da3a6;
 }
 
+#carousel-main-2 {
+    margin: 0;
+}
+
 #shop-now-btn {
     opacity: 0;
+}
+
+#flash-sale-img {
+    background: url('/media/flash-sale.png');
 }
 
 /* Products page */
@@ -199,4 +207,10 @@ a:hover {
         padding-top: 80px;
     }
 
+    #carousel-main-1, #carousel-main-2, {
+        font-size: 2.5rem
+    }
+
+    .shop-action-btn {
+    }
 }

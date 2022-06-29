@@ -39,7 +39,7 @@ class Product(models.Model):
     onSale = models.BooleanField(default=False)
 
     def price_onsale(self):
-        return self.price - ((self.price * 10) / 100)
+        return self.price - ((self.price * 50) / 100)
 
     def __str__(self):
         return self.name

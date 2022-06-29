@@ -19,7 +19,6 @@
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -46,21 +45,13 @@
                 <h1 class="text-background display-5 text-black">
                     On Sale!
                 </h1>
-                <div class="my-5">
+                <div id="on-sale-div" class="my-2">
+                    <a href="{% url 'on_sale' %}">
+                        <img class="img-fluid" src="/media/flash-sale.png" alt="On sale image">
+                    </a>
+                    
                     <p id="corousel-btn">
-                        <a href="" class="btn shop-action-btn btn-lg hover-white rounded-0 text-uppercase py-3">Shop Now</a>
-                    </p>
-                </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container carousel-container h-100 py-3 text-center">
-                <h1 class="display-5 text-black text-background">
-                    Recently Added!
-                </h1>
-                <div class="my-5">
-                    <p id="corousel-btn">
-                        <a href="" class="btn shop-action-btn hover-white btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                        <a href="#" class="btn shop-action-btn btn-lg mt-3 hover-white rounded-0 text-uppercase py-3">Signup</a>
                     </p>
                 </div>
             </div>
