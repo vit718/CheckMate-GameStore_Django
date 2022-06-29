@@ -67,7 +67,6 @@ def on_sale(request):
     return render(request, 'products/on_sale.html', context)
 
 
-
 def product_detail(request, product_id):
     """ Display products detail page """
 
