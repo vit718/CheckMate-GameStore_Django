@@ -42,6 +42,7 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -52,6 +53,19 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
+
+
+def on_sale(request):
+    """Display products on sale"""
+
+    products_on_sale = Product.objects.filter(onSale=True)
+
+    context = {
+        'products_on_sale': products_on_sale,
+    }
+
+    return render(request, 'products/on_sale.html', context)
+
 
 
 def product_detail(request, product_id):

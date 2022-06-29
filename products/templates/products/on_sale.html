@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_header %}
+<!-- Push content down  -->
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- Gives a the page a white background -->
+<div class="overlay"></div>
+<!-- Products page -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="text-dark">On Sale</h2>
+            {% for c in current_categories %}
+                <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                    <span class="p-2 mt-2 badge category-badge text-dark border">{{ c.friendly_name }}</span>
+                </a>
+            {% endfor %}
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="row mt-1 mb-2">
+                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <div class="w-50">
+                        <select id="sort-selector" class="custom-select sort-select-border custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                            <option value="avgRating_asc" {% if current_sorting == 'avgRating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                            <option value="avgRating_desc" {% if current_sorting == 'avgRating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-first">
+                    <p class="text-muted mt-3 text-dark text-center text-md-left">
+                        {% if search_term or current_categories or current_sorting != 'None_None' %}
+                            <span class="small"><a class="text-dark" href="{% url 'products' %}">All Products</a> | </span>
+                        {% endif %}
+                        {{ products_on_sale|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                    </p>
+                </div>
+            </div>
+            <div class="products-row row">
+                <!-- Iterates through Products -->
+                {% for product in products_on_sale %}
+                <!-- Product Image -->
+                <div class="col-sm-6 my-auto col-md-6 col-lg-3 col-xl-2">
+                    <div class="card h-100 border-0">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- Product information card -->
+                <div class="text-center mb-5 text-dark col-sm-6 col-md-6 col-lg-3 col-xl-2">
+                    <div class="card h-100 border-0">
+                        <h3 class="display-5 my-auto pb-2">{{ product.name }}</h3>
+                        <div>
+                            <p class="d-inline mr-1 card ">Age: {{ product.min_age }}+</p>
+                            {% if product.min_players %}
+                            <p class="d-inline mr-1 card"><i class="fa-solid fa-person"></i>
+                                {{ product.min_players }}-{{ product.max_players }}</p>
+                            {% endif %}
+                            {% if product.play_time %}
+                            <p class="d-inline card"><i class="fa-regular fa-clock"></i> {{ product.play_time }} min</p>
+                            {% endif %}
+                        </div>
+                        <div class="mt-2">
+                            {% if product.avg_rating %}
+                            <p class="d-inline"><i class="star-icon fa-regular fa-star"></i>:{{ product.avgRating }} <a
+                                    href="" class="btn reviews-btn">Reviews</a></p>
+                            {% else %}
+                            <p class="d-inline"><i class="star-icon fa-solid fa-star"></i> <a href=""
+                                    class="btn reviews-btn"> No Reviews</a></p>
+                            {% endif %}
+                        </div>
+                        <div class="mt-2">
+                            <p><strong>&euro;{{ product.price }}</strong></p>
+                            <a href="" class="btn hover-white add-to-cart-btn">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- A responsive hr at the bottom of each products row -->
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-lg-none my-3">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-lg-block d-xl-none my-3">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-xl-block my-3">
+                    <hr>
+                </div>
+                {% endif %}
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="btt-button shadow-sm rounded-0 border border-black">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-dark mx-auto my-auto"></i>
+    </a>	
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
+{% endblock %}

@@ -36,6 +36,7 @@ class Product(models.Model):
     play_time = models.PositiveSmallIntegerField(null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+    onSale = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
