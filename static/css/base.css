@@ -138,6 +138,16 @@ a:hover {
     cursor: pointer;
 }
 
+.on-sale {
+    margin: 0;
+    color: red;
+}
+
+.old-price {
+    text-decoration: line-through;
+    margin-bottom: 0;
+}
+
 /* Footer */
 
 #footer {

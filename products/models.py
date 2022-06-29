@@ -38,5 +38,8 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     onSale = models.BooleanField(default=False)
 
+    def price_onsale(self):
+        return self.price - ((self.price * 10) / 100)
+
     def __str__(self):
         return self.name
