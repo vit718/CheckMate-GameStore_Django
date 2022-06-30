@@ -97,7 +97,7 @@
             </div>
         </div>
         <div class="row">	
-            <nav class="navbar pr-0 backg-light navbar-expand-lg navbar-light w-100">	
+            <nav class="navbar mobile-nav backg-light navbar-expand-lg navbar-light w-100">	
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">	
                     <span class="navbar-toggler-icon"></span>	
                 </button>	
@@ -121,9 +121,9 @@
     {% endblock %}
 
     <!-- Footer -->
-    <footer id="footer" class="fixed-bottom py-3 text-center">
+    <footer class="fixed-bottom py-2 footer text-center">
         <div class="container d-none d-lg-block">
-            <div id="footer-links" class="text-center float-container">
+            <div class="footer-links text-center float-container">
                 <div>
                     <a class="text-dark bigger-font-size" href="">Privacy Policy</a>
                 </div>
@@ -147,6 +147,7 @@
         </div>
         {% include 'includes/mobile-footer.html' %}	
     </footer>
+    
 
     <script src="{% static 'js/base.js' %}"></script>
   </body>

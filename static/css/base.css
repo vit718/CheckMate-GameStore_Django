@@ -162,15 +162,15 @@ a:hover {
 
 /* Footer */
 
-#footer {
+.footer {
     background-color: #E6F4F1;
 }
 
-#footer-links {
+.footer-links {
     padding-top: 10px;
 }
 
-#footer-icons p {
+.footer-icons p {
     margin-bottom: 0;
 }
 
@@ -196,7 +196,7 @@ a:hover {
     }
 }
 
-/* Adjust footer size for small screens */
+/* Adjust size for small screens */
 @media (max-width: 992px) {
 
     #footer-links {
@@ -211,10 +211,18 @@ a:hover {
         padding-top: 80px;
     }
 
-    #carousel-main-1, #carousel-main-2, {
-        font-size: 2.5rem
+    #carousel-main-1, #carousel-main-2 {
+        font-size: 2rem
     }
+}
 
-    .shop-action-btn {
+/* Adjust navbar for the smallest screens */
+@media (max-width: 400px) {
+    .mobile-nav {
+        padding-right: 5px;
+    }
+    .mobile-nav-link {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }

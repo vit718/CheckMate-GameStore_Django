@@ -1,8 +1,8 @@
-<li class="list-inline-item">
-    <a class="nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<li class="list-inline-item mr-0">
+    <a class="nav-link mobile-nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-search text-dark fa-lg"></i></div>
-            <p class="my-0">Search</p>
+            <p class="my-0 text-dark">Search</p>
         </div>
     </a>
     <div class="dropdown-menu border-0 w-100 p-2 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -20,8 +20,8 @@
         </form>
     </div>
 </li>
-<li class="list-inline-item dropdown">
-    <a class="text-dark nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<li class="list-inline-item mr-0 dropdown">
+    <a class="text-dark nav-link mobile-nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg"></i></div>
             <p class="my-0">My Account</p>
@@ -40,8 +40,8 @@
         {% endif %}
     </div>
 </li>
-<li class="list-inline-item">
-    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-dark{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
+<li class="list-inline-item mr-0">
+    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-dark{% endif %} nav-link mobile-nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
         <div class="text-center">
             <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
             <p class="my-0">
