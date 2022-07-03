@@ -34,6 +34,11 @@ a:hover {
     padding-bottom: 120px;
 }
 
+.btn-dark {
+    background-color: #002F33;
+    color: #E6F4F1;
+}
+
 /* Navbar */
 
 #logo-img {
