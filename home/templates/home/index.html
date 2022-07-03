@@ -69,3 +69,8 @@
 </div>
 
 {% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'home/includes/carousel_script.html' %}
+{% endblock %}
