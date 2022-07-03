@@ -30,6 +30,10 @@ a:hover {
     margin-bottom: 0;
 }
 
+.padding-b-120 {
+    padding-bottom: 120px;
+}
+
 /* Navbar */
 
 #logo-img {
@@ -107,10 +111,6 @@ a:hover {
     border-color: #002F33 !important;
 }
 
-.products-row {
-    padding-bottom: 120px;
-}
-
 .reviews-btn {
     color: #5da3a6;
     font-weight: 700;
@@ -158,6 +158,7 @@ a:hover {
 
 .btn-outline-dark:hover {
     background-color: #002F33;
+    color: #E6F4F1;
 }
 
 /* Footer */

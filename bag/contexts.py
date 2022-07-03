@@ -3,8 +3,10 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+# from boutique ADO
+
 def bag_contents(request):
-    # from boutique ADO
+    """ Bag of contents """
     bag_items = []
     total = 0
     product_count = 0
