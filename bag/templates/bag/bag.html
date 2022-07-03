@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 
 {% block page_header %}
@@ -88,11 +89,11 @@
                             </td>
                             {% if item.product.onSale %}
                             <td class="py-3">
-                                <p class="my-0">&euro;{{ item.product.price_onsale|floatformat:2 }}</p>
+                                <p class="my-0">&euro;{{ item.product.price_onsale|calc_subtotal_onsale:item.quantity|floatformat:2 }}</p>
                             </td>
                             {% else %}
                             <td class="py-3">
-                                <p class="my-0">&euro;{{ item.product.price }}</p>
+                                <p class="my-0">&euro;{{ item.product.price|calc_subtotal:item.quantity }}</p>
                             </td>
                             {% endif %}
                         </tr>
@@ -156,8 +157,8 @@
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}`;
+        var itemId = $(this).attr('id').split('item')[1];
+        var url = `/bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)

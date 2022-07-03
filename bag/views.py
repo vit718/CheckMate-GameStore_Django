@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 # from boutique ADO
 
@@ -26,6 +26,19 @@ def add_to_bag(request, item_id):
     return redirect(redirect_url)
 
 
+def remove_from_bag(request, item_id):
+    """Remove a specified product from the bag"""
+    try:
+        bag = request.session.get('bag', {})
+        bag.pop(item_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
+
+
 def adjust_bag(request, item_id):
     """ Adjust quantity of the specified product in the bag """
 
@@ -35,7 +48,7 @@ def adjust_bag(request, item_id):
     if quantity > 0:
         bag[item_id] = quantity
     else:
-        bag.pop([item_id])
+        bag.pop(item_id)
 
     request.session['bag'] = bag
 
