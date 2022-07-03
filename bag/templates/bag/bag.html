@@ -27,7 +27,7 @@
             {% if bag_items %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
-                    <thead class="text-black">
+                    <thead>
                         <tr>
                             <th scope="col">Product Info</th>
                             <th scope="col"></th>
@@ -46,15 +46,55 @@
                                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                 <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                             </td>
+                            {% if item.product.onSale %}
                             <td class="py-3">
-                                <p class="my-0">${{ item.product.price }}</p>
+                                <p class="my-0">&euro;{{ item.product.price_onsale|floatformat:2 }}</p>
                             </td>
+                            {% else %}
+                            <td class="py-3">
+                                <p class="my-0">&euro;{{ item.product.price }}</p>
+                            </td>
+                            {% endif %}
                             <td class="py-3 w-25">
-                                <p class="my-0">{{ item.quantity }}</p>
+                                <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-sm btn-dark rounded-0" 
+                                                data-item_id="{{ item.item_.id }}" id="decrement-qty_{{ item.item_.id }}">
+                                                <span>
+                                                    <i class="fas fa-minus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                            </div>
+                                            <input class="form-control form-control-sm qty_input" type="number" 
+                                            name="quantity" value="{{ item.quantity }}" min="1" max="99" 
+                                            data-item_id="{{ item.item_.id }}" id="id_qty_{{ item.item_.id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-sm btn-dark rounded-0"
+                                                data-item_id="{{ item.item_.id }}" id="increment-qty_{{ item.item_.id }}">
+                                                <span>
+                                                    <i class="fas fa-plus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                            </div>
+                                        </div>
+                                    </div>   
+
+                                </form>
+                                <a class="update-link text-info"><small>Update</small></a>
+                                <a class="remove-item text-danger float-right" id="remove_item{{ item.item_id }}"><small>Remove</small></a>
                             </td>
+                            {% if item.product.onSale %}
                             <td class="py-3">
-                                <p class="my-0">${{ item.product.price }}</p>
+                                <p class="my-0">&euro;{{ item.product.price_onsale|floatformat:2 }}</p>
                             </td>
+                            {% else %}
+                            <td class="py-3">
+                                <p class="my-0">&euro;{{ item.product.price }}</p>
+                            </td>
+                            {% endif %}
                         </tr>
                     {% endfor %}
                     <tr>
@@ -64,7 +104,7 @@
                             <h4 class="mt-4"><strong>Grand Total: &euro;{{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
                                 <p class="mb-1 text-danger">
-                                    You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                    You could get free delivery by spending just <strong>&euro;{{ free_delivery_delta }}</strong> more!
                                 </p>
                             {% endif %}
                         </td>
@@ -99,5 +139,32 @@
         </div>
     </div>
 </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
 
 {% endblock %}
