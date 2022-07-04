@@ -36,6 +36,7 @@
     <title>CheckMate Game Store {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
+    <!-- Navbar logo -->
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row backg-light pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -43,6 +44,7 @@
                     <img id="logo-img" src="/media/logo.png" alt="Store Logo">
                 </a>
             </div>
+            <!-- Search bar -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
@@ -57,6 +59,7 @@
                     </div>
                 </form>
             </div>
+            <!-- My account links -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
@@ -79,6 +82,7 @@
                             {% endif %}
                         </div>
                     </li>
+                    <!-- Navbar shopping cart -->
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-dark font-weight-bold{% else %}text-dark{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center bigger-font-size">
@@ -96,6 +100,7 @@
                 </ul>
             </div>
         </div>
+        <!-- Navbar category links -->
         <div class="row">	
             <nav class="navbar mobile-nav backg-light navbar-expand-lg navbar-light w-100">	
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">	
@@ -106,9 +111,23 @@
             </nav>	
         </div>	
     </header>
-
+<!-- Display alert messages -->
     {% if messages %}
-        <div class="message-container"></div>
+    <div class="message-container">
+        {% for message in messages %}
+            {% with message.level as level %}
+                {% if level == 40 %}
+                    {% include 'includes/toasts/toast_error.html' %}
+                {% elif level == 30 %}
+                    {% include 'includes/toasts/toast_warning.html' %}
+                {% elif level == 25 %}
+                    {% include 'includes/toasts/toast_success.html' %}
+                {% else %}
+                    {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+            {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
 
     {% block page_header %}
@@ -118,6 +137,9 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
 
     <div class="padding-b-120 container"></div>
