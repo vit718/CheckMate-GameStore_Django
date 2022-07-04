@@ -86,13 +86,13 @@
             <p class="text-dark">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
-                <fieldset>
-                    <legend class="text-dark">Details</legend>
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="fieldset-label text-dark px-2 w-auto">Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>
-                <fieldset>
-                    <legend class="text-dark">Delivery</legend>
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="fieldset-label text-dark px-2 w-auto">Delivery</legend>
                     {{ order_form.phone_number | as_crispy_field }}
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
@@ -112,8 +112,8 @@
                         {% endif %}
                     </div>
                 </fieldset>
-                <fieldset>
-                    <legend>Payment</legend>
+                <fieldset class="px-3">
+                    <legend class="fieldset-label text-dark px-2 w-auto">Payment</legend>
                     <!-- A Stripe card element will go here -->
                     <div class="mb-3" id="card-element"></div>
 
@@ -146,4 +146,11 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
