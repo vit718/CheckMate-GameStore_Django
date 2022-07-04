@@ -15,7 +15,7 @@
             </div>
         </div>
         {% if grand_total %}
-            <p class="logo-font bg-white text-black py-1">Your Bag ({{ product_count }})</p>
+            <p class="logo-font bg-white text-black py-1">Your Cart ({{ product_count }})</p>
             <div class="bag-notification-wrapper">
                 {% for item in bag_items %}
                     <div class="row">
@@ -42,7 +42,7 @@
                         </p>
                     {% endif %}
                     <a href="{% url 'view_bag' %}" class="btn add-to-cart-btn hover-white btn-block rounded-0">
-                        <span class="text-uppercase">Go To Secure Checkout</span>
+                        <span class="text-uppercase">Proceed to Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>

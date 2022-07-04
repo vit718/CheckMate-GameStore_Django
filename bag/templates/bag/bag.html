@@ -15,6 +15,7 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container mb-2">
+    <!-- Page title -->
     <div class="row">
         <div class="col">
             <hr>
@@ -22,7 +23,7 @@
             <hr>
         </div>
     </div>
-
+    <!-- Table headers -->
     <div class="row">
         <div class="col">
             {% if bag_items %}
@@ -38,6 +39,7 @@
                         </tr>
                     </thead>
 
+                    <!-- Product info -->
                     {% for item in bag_items %}
                         <tr>
                             <td class="p-3 w-25">
@@ -48,15 +50,18 @@
                                 <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                             </td>
                             {% if item.product.onSale %}
+                            <!-- Displays price for products on sale -->
                             <td class="py-3">
                                 <p class="my-0">&euro;{{ item.product.price_onsale|floatformat:2 }}</p>
                             </td>
                             {% else %}
+                            <!-- Displays price for general products -->
                             <td class="py-3">
                                 <p class="my-0">&euro;{{ item.product.price }}</p>
                             </td>
                             {% endif %}
                             <td class="py-3 w-25">
+                                <!-- Form to adjust products quantity -->
                                 <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                     {% csrf_token %}
                                     <div class="form-group">
@@ -84,20 +89,25 @@
                                     </div>   
 
                                 </form>
+                                <!-- Update -->
                                 <a class="update-link text-info"><small>Update</small></a>
+                                <!-- Remove product -->
                                 <a class="remove-item text-danger float-right" id="remove_item{{ item.item_id }}"><small>Remove</small></a>
                             </td>
+                            <!-- Displays subtotal for products on Sale  -->
                             {% if item.product.onSale %}
                             <td class="py-3">
                                 <p class="my-0">&euro;{{ item.product.price_onsale|calc_subtotal_onsale:item.quantity|floatformat:2 }}</p>
                             </td>
                             {% else %}
+                            <!-- Displays subtotal for general products -->
                             <td class="py-3">
                                 <p class="my-0">&euro;{{ item.product.price|calc_subtotal:item.quantity }}</p>
                             </td>
                             {% endif %}
                         </tr>
                     {% endfor %}
+                    <!-- Displays order total -->
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
                             <h6><strong>Subtotal: &euro;{{ total|floatformat:2 }}</strong></h6>
@@ -110,6 +120,7 @@
                             {% endif %}
                         </td>
                     </tr>
+                    <!-- Page buttons to proceed to Checkout or keep Shopping -->
                     <tr>
                         <td colspan="5" class="text-right">
                             <a href="{% url 'products' %}" class="btn btn-outline-dark btn-lg">
@@ -119,7 +130,7 @@
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
                             <a href="" class="btn add-to-cart-btn hover-white btn-lg">
-                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="text-uppercase">Proceed to Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
                                 </span>
@@ -129,6 +140,7 @@
                 </table>
             </div>
             {% else %}
+            <!-- Displays when cart is empty -->
             <p class="lead text-dark mb-5">Your cart is empty.</p>
             <a href="{% url 'products' %}" class="btn btn-outline-dark btn-lg">
                 <span class="icon">
