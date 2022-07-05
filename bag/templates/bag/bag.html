@@ -97,7 +97,7 @@
                             <!-- Displays subtotal for products on Sale  -->
                             {% if item.product.onSale %}
                             <td class="py-3">
-                                <p class="my-0">&euro;{{ item.product.price_onsale|calc_subtotal_onsale:item.quantity|floatformat:2 }}</p>
+                                <p class="my-0">&euro;{{ item.product.price_onsale|calc_subtotal:item.quantity|floatformat:2 }}</p>
                             </td>
                             {% else %}
                             <!-- Displays subtotal for general products -->
