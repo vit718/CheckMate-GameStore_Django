@@ -30,6 +30,16 @@
     right: .5rem;
 }
 
+select,
+select option {
+  color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #aab7c4 !important;
+}
+
 #payment-form .form-control,
 #card-element {
     color: #000;
