@@ -1,15 +1,18 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+"""Imported models"""
+import json
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+    )
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
-from .forms import OrderForm
-from .models import Order, OrderLineItem
+import stripe
+
 from products.models import Product
 from bag.contexts import bag_contents
-
-import stripe
-import json
+from .forms import OrderForm
+from .models import Order, OrderLineItem
 
 @require_POST
 def cache_checkout_data(request):
@@ -73,13 +76,16 @@ def checkout(request):
                 # Handle products not found in the database
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your cart wasn't found in our database."
+                        "One of the products in your cart \
+                            wasn't found in our database."
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number])
+                )
         # Handle errors
         else:
             messages.error(request, 'There was an error with your form. \
@@ -89,7 +95,9 @@ def checkout(request):
         bag = request.session.get('bag', {})
         # Handle empty bag
         if not bag:
-            messages.error(request, "There's nothing in your cart at the moment")
+            messages.error(request,
+                           "There's nothing in your cart at the moment"
+                           )
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
