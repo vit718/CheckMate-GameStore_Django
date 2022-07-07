@@ -37,7 +37,7 @@
                         <span class="float-right">&euro;{{ total|floatformat:2 }}</span>
                     </p></strong>
                     {% if free_delivery_delta > 0 %}
-                        <p class="mb-0 p-2 bg-warning shadow-sm text-dark text-center">
+                        <p class="mb-0 rounded p-2 bg-warning shadow-sm text-dark text-center">
                             Spend <strong>&euro;{{ free_delivery_delta }}</strong> more to get free next day delivery!
                         </p>
                     {% endif %}
