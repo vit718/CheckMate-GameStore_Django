@@ -39,6 +39,11 @@ a:hover {
     color: #E6F4F1;
 }
 
+.btn-dark-2 {
+    background-color: #002F33;
+    color: #5da3a6;
+}
+
 /* ------------------------------- Navbar */
 
 #logo-img {
