@@ -1,4 +1,4 @@
-""" Imported Models"""
+""" Imported"""
 from django.db import models
 
 

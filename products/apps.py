@@ -1,3 +1,4 @@
+"""Imported"""
 from django.apps import AppConfig
 
 
