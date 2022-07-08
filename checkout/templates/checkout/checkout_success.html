@@ -24,6 +24,7 @@
             <hr>
             <h2 class="text-dark mb-4">Your order is completed!</h2>
             <hr>
+            <p class="text-dark mt-2">Thank you for shopping with us.</p>
             <p class="text-dark mb-4">A confirmation e-mail will be sent to <strong>{{ order.email }}</strong></p>
         </div>
     </div>
@@ -191,9 +192,19 @@
        </div>
     </div>
     <div class="row">
+        {% if from_profile %}
         <div class="col">
-            <p class="text-dark mt-2 font-weight-bold mb-4">Thank you for shopping with us.</p>
+            <a href="{% url 'profile' %}">
+                <span class="btn btn-dark-2 hover-white mt-3">Back to Profile</span>
+            </a>
         </div>
+        {% else %}
+        <div class="col">
+            <a href="{% url 'on_sale' %}">
+                <span class="btn btn-dark-2 hover-white mt-3">Check out the half price games of this week!</span>
+            </a>
+        </div>
+        {% endif %}
     </div>
 </div>
 
