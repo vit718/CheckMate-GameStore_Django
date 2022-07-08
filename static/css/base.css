@@ -42,6 +42,7 @@ a:hover {
 .btn-dark-2 {
     background-color: #002F33;
     color: #5da3a6;
+    text-transform: uppercase;
 }
 
 .btn-outline-dark:hover {
@@ -62,6 +63,15 @@ a:hover {
 
 .dropdown-item, .dropdown-menu {
     background-color: #E6F4F1;
+}
+
+/* Search input color */
+input[name=q] {
+    color: #002F33;
+}
+
+input[name=q]::placeholder {
+    color: #aab7c4;
 }
 
 /* ------------------------------- Home page carousel */
@@ -141,6 +151,7 @@ a:hover {
 .add-to-cart-btn {
     background: #002F33;
     color: #5da3a6;
+    text-transform: uppercase;
 }
 
 .category-badge {

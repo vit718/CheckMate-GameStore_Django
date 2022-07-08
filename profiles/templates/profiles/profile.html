@@ -26,8 +26,26 @@
             <hr>
         </div>
     </div>
-
-    {{ profile }}
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <p class="text-dark">Delivery Information</p>
+            <form action="{% url 'profile' %}" method="post" id="profile-update-form">
+                {% csrf_token %}
+                {{ form|crispy}}
+                <!-- {{ form|crispy }} -->
+                <button class="btn btn-dark-2 hover-white">Update Information</button>
+            </form>
+        </div>
+        <div class="col-12 col-lg-6">
+            <p class="text-dark">Order History</p>
+            {{ orders }}
+        </div>
+    </div>
    
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
