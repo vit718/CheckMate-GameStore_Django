@@ -43,7 +43,8 @@ select option[value=""] {
 #payment-form .form-control,
 #card-element {
     color: #000;
-    border: 1px solid #000;
+    border: 1px solid #ced4da !important;
+    border-radius: 0.3rem;
 }
 
 #loading-overlay {

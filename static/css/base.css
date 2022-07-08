@@ -44,6 +44,11 @@ a:hover {
     color: #5da3a6;
 }
 
+.btn-outline-dark:hover {
+    background-color: #002F33;
+    color: #E6F4F1;
+}
+
 /* ------------------------------- Navbar */
 
 #logo-img {
@@ -167,11 +172,6 @@ a:hover {
     margin-bottom: 0;
 }
 
-.btn-outline-dark:hover {
-    background-color: #002F33;
-    color: #E6F4F1;
-}
-
 /* ------------------------------- Footer */
 
 .footer {
@@ -189,6 +189,12 @@ a:hover {
 .float-container {
     width: 50%;
     float: left;
+}
+
+/* ------------------------------- allauth */
+
+.allauth-form-inner-content a {
+	color: #0e8f8f;
 }
 
 /*From boutique ado */

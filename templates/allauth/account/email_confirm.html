@@ -7,8 +7,9 @@
 
 
 {% block inner_content %}
+<hr>
 <h1 class="text-dark">{% trans "Confirm E-mail Address" %}</h1>
-
+<hr>
 {% if confirmation %}
 
 {% user_display confirmation.email_address.user as user_display %}

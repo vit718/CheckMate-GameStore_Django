@@ -45,8 +45,9 @@
 {% endif %}
 
   {% if can_add_email %}
+    <hr>
     <h2 class="text-dark">{% trans "Add E-mail Address" %}</h2>
-
+    <hr>
     <form method="post" action="{% url 'account_email' %}" class="add_email">
         {% csrf_token %}
         {{ form|crispy }}

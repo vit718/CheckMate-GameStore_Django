@@ -17,7 +17,8 @@
 <!-- Products page -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center mt-3">
+        <div class="col text-center">
+            <hr class="w-50">
             <h2 class="text-dark">Products</h2>
             {% for c in current_categories %}
                 <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">

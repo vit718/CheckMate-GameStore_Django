@@ -5,8 +5,9 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block inner_content %}
+<hr>
 <h1 class="text-dark">{% trans "Sign Out" %}</h1>
-
+<hr>
 <p>{% trans 'Are you sure you want to sign out?' %}</p>
 
 <form method="post" action="{% url 'account_logout' %}">
