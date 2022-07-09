@@ -1,0 +1,17 @@
+Hello {{ order.full_name }}!
+
+Your order is confirmed and will be delivered to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+Order Total:€{{ order.order_total }}
+Delivery: €{{ order.delivery_cost }}
+Grand Total: €{{ order.grand_total }}
+
+Please contact us if you have any questions {{ contact.email }}.
+
+Thank you for shopping with us!
+
+Sincerely,
+
+CheckMate GameStore
