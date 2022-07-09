@@ -208,6 +208,18 @@ input[name=q]::placeholder {
 	color: #0e8f8f;
 }
 
+.allauth-form-inner-content {
+	color: #002F33;
+}
+
+.allauth-form-inner-content label {
+	font-weight: 700;
+}
+
+#div_id_remember label {
+    font-weight: 400;
+}
+
 /*From boutique ado */
 /* ------------------------------- bootstrap toasts */
 
