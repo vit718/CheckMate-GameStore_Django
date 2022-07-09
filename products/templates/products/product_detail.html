@@ -41,6 +41,7 @@
                         {% endif %}
                     </div>
                 </div>
+                
 
                 <!-- Product information card -->
                 
@@ -108,15 +109,22 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="text-center w-100 mt-2">
+                                    <small>
+                                        <a class="text-info text-uppercase mr-2 font-weight-bold" href="{% url 'edit_product' product.id %}">Edit</a>
+                                        <a class="text-danger text-uppercase ml-2 font-weight-bold" href="{% url 'confirm_delete' product.id %}">Delete</a>
+                                    </small>
+                                </div>
+                                
     
                                 <div class="col-12">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-dark mt-5">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-dark mt-3">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <input type="submit" class="btn hover-white add-to-cart-btn mt-5" value="ADD TO CART">
+                                    <input type="submit" class="btn hover-white add-to-cart-btn mt-3" value="ADD TO CART">
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
