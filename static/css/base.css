@@ -50,6 +50,11 @@ a:hover {
     color: #E6F4F1;
 }
 
+.btn-outline-dark{
+    text-transform: uppercase;
+    color: #002F33;
+}
+
 /* ------------------------------- Navbar */
 
 #logo-img {
@@ -219,6 +224,9 @@ input[name=q]::placeholder {
 #div_id_remember label {
     font-weight: 400;
 }
+
+/* ------------------------------- Product management */
+
 
 /*From boutique ado */
 /* ------------------------------- bootstrap toasts */

@@ -32,7 +32,7 @@ class Product(models.Model):
     min_players = models.PositiveSmallIntegerField(null=True, blank=True)
     max_players = models.PositiveSmallIntegerField(null=True, blank=True)
     min_age = models.PositiveSmallIntegerField(null=True, blank=True)
-    avgRating = models.FloatField(default=0)
+    avgRating = models.FloatField(default=0, null=True, blank=True)
     play_time = models.PositiveSmallIntegerField(null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
