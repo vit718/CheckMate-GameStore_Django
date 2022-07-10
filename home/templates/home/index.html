@@ -49,10 +49,19 @@
                     <a href="{% url 'on_sale' %}">
                         <img class="img-fluid" src="/media/flash-sale.png" alt="On sale image">
                     </a>
-                    
-                    <p id="corousel-btn">
-                        <a href="#" class="btn shop-action-btn btn-lg mt-3 hover-white text-uppercase py-3">Signup</a>
-                    </p>
+                    <div>
+                        <h5 class="text-white mb-3">Newsletter</h5>
+                        <p class="small text-muted">Signup for our newsleeter here!.</p>
+                        <form action="{% url 'newsletter' %}" method="POST">
+                            <div class="mb-3">
+                                {% csrf_token %}
+                                {{ sub_form|crispy }}
+                                <input class="btn shop-action-btn btn-lg mt-3 hover-white text-uppercase py-3"
+                                 type="submit" value="Submit" class="btn btn-primary">
+                            </div>
+                        </form>
+                        <p class="small text-muted"><a href="#">Unsubscribe</a></p>
+                    </div>
                 </div>
             </div>
           </div>
