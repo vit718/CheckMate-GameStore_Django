@@ -225,8 +225,17 @@ input[name=q]::placeholder {
     font-weight: 400;
 }
 
-/* ------------------------------- Product management */
+/* ------------------------------- Product Reviews */
 
+.review-card {
+    background-color: #f5dc96;
+}
+
+.reviews-wrapper {
+    height: 550px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 /*From boutique ado */
 /* ------------------------------- bootstrap toasts */
@@ -245,6 +254,12 @@ input[name=q]::placeholder {
 
 .toast-capper {
     height: 2px;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 /*From boutique ado */
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -290,12 +305,6 @@ input[name=q]::placeholder {
 
 .arrow-dark {
     border-bottom-color: #343a40 !important;
-}
-
-.bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 /* -------------------------------- Media Queries

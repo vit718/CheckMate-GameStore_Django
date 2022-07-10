@@ -4,10 +4,10 @@ from .models import Product, Review
 
 
 def product_reviews(request, product_id):
-    """ Display products detail page """
+    """ Display products reviews page """
 
     product = get_object_or_404(Product, pk=product_id)
-    reviews = Review.objects.order_by('created_at')
+    reviews = Review.objects.filter(product=product_id).order_by('-created_at')
 
     context = {
         'product': product,
