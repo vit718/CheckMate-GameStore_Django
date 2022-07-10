@@ -12,9 +12,28 @@
 {% endblock %}
 
 {% block content %}
-    <p>You unsubscribed from the newsletter</p>
 
+<div>
+    <div class="newsletter-div mx-auto px-2 py-2">
+        <h5>Enter your email address below to unsubscribe from our newsletter.</h5>
+        <form action="{% url 'unsubscribe' %}" method="POST">
+            <div class="mb-3">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="row text-center">
+                    
+                    <div class="col-6">
+                        <a class="btn btn-outline-dark" href="{% url 'home' %}">Cancel</a>
+                    </div>
+                    <div class="col-6">
+                        <input class="btn btn-dark-2 hover-white text-uppercase"
+                        type="submit" value="Unsubscribe">
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </form>
+</div>
 
 {% endblock %}
-
-{% block postloadjs %}

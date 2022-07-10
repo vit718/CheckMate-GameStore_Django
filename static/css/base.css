@@ -11,6 +11,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: 'Roboto Flex', sans-serif;
+    color: #002F33;
 }
 
 a:hover {

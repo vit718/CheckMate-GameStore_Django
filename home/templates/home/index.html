@@ -57,9 +57,9 @@
                                 {{ sub_form|crispy }}
                                 <input class="btn btn-dark-2 hover-white text-uppercase py-3"
                                  type="submit" value="Subscribe" class="btn btn-primary">
-                                <p class="small"><a class="btn mt-2 btn-outline-dark" href="#">Unsubscribe</a></p>
                             </div>
                         </form>
+                        <p class="small"><a class="btn mt-2 btn-outline-dark" href="{% url 'unsubscribe' %}">Unsubscribe</a></p>
                         
                     </div>
                 </div>
