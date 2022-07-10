@@ -45,22 +45,22 @@
                 <h1 class="text-background display-5">
                     On Sale!
                 </h1>
-                <div id="on-sale-div" class="my-2">
+                <div id="on-sale-div w-100" class="my-2">
                     <a href="{% url 'on_sale' %}">
                         <img class="img-fluid" src="/media/flash-sale.png" alt="On sale image">
                     </a>
-                    <div>
-                        <h5 class="text-white mb-3">Newsletter</h5>
-                        <p class="small text-muted">Signup for our newsleeter here!.</p>
+                    <div class="newsletter-div mx-auto px-2 py-2">
+                        <h3>Subscribe for our newsleeter here!</p>
                         <form action="{% url 'newsletter' %}" method="POST">
                             <div class="mb-3">
                                 {% csrf_token %}
                                 {{ sub_form|crispy }}
-                                <input class="btn shop-action-btn btn-lg mt-3 hover-white text-uppercase py-3"
-                                 type="submit" value="Submit" class="btn btn-primary">
+                                <input class="btn btn-dark-2 hover-white text-uppercase py-3"
+                                 type="submit" value="Subscribe" class="btn btn-primary">
+                                <p class="small"><a class="btn mt-2 btn-outline-dark" href="#">Unsubscribe</a></p>
                             </div>
                         </form>
-                        <p class="small text-muted"><a href="#">Unsubscribe</a></p>
+                        
                     </div>
                 </div>
             </div>

@@ -23,7 +23,8 @@ def newsletter(request):
             instance.save()
             messages.success(
                 request,
-                f"Congratulations! {instance.email} has been added to our mailing list",
+                f"Congratulations! {instance.email} \
+                has been added to our mailing list",
             )
             return redirect("home")
 

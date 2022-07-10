@@ -123,6 +123,12 @@ input[name=q]::placeholder {
     background: url('/media/flash-sale.png');
 }
 
+/* ------------------------------- Newsletter */
+
+.newsletter-div {
+    background-color: #E6F4F1;
+    max-width: 470px;
+}
 
 /* ------------------------------- Products page */
 
