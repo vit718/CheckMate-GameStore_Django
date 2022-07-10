@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_header %}
+<!-- Push content down  -->
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- Gives a the page a white background -->
+<div class="overlay"></div>
+<!-- Products page -->
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <hr class="w-50">
+            <h2 class="text-dark">Product Reviews</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row text-dark">
+        <div class="col-10 col-lg-6 mx-auto">
+            <div class="p-3 w-100">
+                {% if product.image %}
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-10 col-lg-6 mx-auto">
+            <h3>{{ product.name }}</h3>
+            <p>Overall Rating:{{ product.avgRating }}</p>
+            <div>
+                {% for review in reviews %}
+                <div class="row card border">
+                    <div class="col">
+                        <h5 class="">Author: {{ review.user.username }}</h5>
+                        <h5>Rating: {{ review.rating }} </h5>
+                    </div>
+                    <div class="col-md-9">
+                        <p>{{ review.comment }}</p>
+                    </div>
+                    <div class="col">
+                        {% if request.user == review.user %}
+                            <a href="#">Edit</a>
+                            <a href="#">Delete</a>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
