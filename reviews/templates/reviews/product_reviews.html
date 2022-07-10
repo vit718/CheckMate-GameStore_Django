@@ -38,9 +38,12 @@
             </div>
         </div>
         <div class="col-10 col-lg-6 mx-auto text-center">
+            {% if reviews %}
             <h3>{{ product.name }}</h3>
-            <p>Overall Rating:{{ product.avgRating }}</p>
+            <h4>Overall Rating: <i class="star-icon fa-solid fa-star"></i> {{ average|floatformat:2 }}</h4>
             <div>
+            {% else %}
+            {% endif %}
                 {% if reviews %}
                 <div class="reviews-wrapper text-left">
                     {% for review in reviews %}                        
@@ -61,6 +64,15 @@
                     </div>
                     {% endfor %}
                 </div>
+                <div class="col-12">
+                    <a href="{% url 'products' %}" class="btn btn-outline-dark mt-3">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                    <a href="{% url 'reviews_form' product.id %}" class="btn hover-white add-to-cart-btn mt-3"> Leave a Review </a>
+                </div>
                
                 
                 {% else %}
@@ -72,7 +84,7 @@
                             </span>
                             <span class="text-uppercase">Keep Shopping</span>
                         </a>
-                        <a href="#" class="btn hover-white add-to-cart-btn mt-3"> Leave a Review </a>
+                        <a href="{% url 'reviews_form' product.id %}" class="btn hover-white add-to-cart-btn mt-3"> Leave a Review </a>
                     </div>
                 {% endif %}
             </div>

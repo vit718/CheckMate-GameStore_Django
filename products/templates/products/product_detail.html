@@ -61,7 +61,7 @@
                         <div class="mt-2">
                             {% if product.avg_rating %}
                             <p class="d-inline"><i class="star-icon fa-regular fa-star"></i>:{{ product.avg_rating }} <a
-                                    href="" class="btn reviews-btn">Reviews</a></p>
+                                    href="{% url 'product_reviews' product.id %}" class="btn reviews-btn">Reviews</a></p>
                             {% else %}
                             <p class="d-inline"><i class="star-icon fa-solid fa-star"></i> <a href=""
                                     class="btn reviews-btn"> No Reviews</a></p>

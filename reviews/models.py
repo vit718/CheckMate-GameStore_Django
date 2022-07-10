@@ -12,7 +12,7 @@ class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.TextField(max_length=1000)
     rating = models.FloatField(
-        default=0, validators=[MinValueValidator(1), MaxValueValidator(5)]
+        default=0, validators=[MinValueValidator(0), MaxValueValidator(5)]
         )
     created_at = models.DateTimeField(auto_now_add=True)
 
