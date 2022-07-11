@@ -357,7 +357,7 @@ input[name=q]::placeholder {
         padding-right: 5px;
     }
     .mobile-nav-link {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
