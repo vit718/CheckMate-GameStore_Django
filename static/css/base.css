@@ -244,6 +244,14 @@ input[name=q]::placeholder {
     overflow-y: auto;
 }
 
+/* ------------------------------- Product Reviews */
+
+.page-not-found {
+    background: url('/media/404-page.png') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
 /*From boutique ado */
 /* ------------------------------- bootstrap toasts */
 
