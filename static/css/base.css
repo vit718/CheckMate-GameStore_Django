@@ -244,13 +244,6 @@ input[name=q]::placeholder {
     overflow-y: auto;
 }
 
-/* ------------------------------- 404 error */
-
-/* .page-not-found {
-    background: url('/media/404-page.png') no-repeat center center fixed;
-    background-size: cover;
-} */
-
 /*From boutique ado */
 /* ------------------------------- bootstrap toasts */
 
