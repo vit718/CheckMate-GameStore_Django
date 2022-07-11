@@ -5,7 +5,7 @@ This project uses the Django framework, HTML, Python, CSS and JavaScript.
 
 A live website can be found [here](https://marcellomuy-checkmate.herokuapp.com/).
 
-![website preview]()
+![website preview](/readme_files/website-preview.png)
 
 ## Table of Contents
 
@@ -198,15 +198,31 @@ Also on the right is a shopping cart icon that works as a link for the shopping 
 
 Under the search bar there are 5 links.
 
-    (Home), a link to the home page
+- (Home), a link to the "home" page
 
-    (All products), dropdown with options to search products by price and rating.
+- (All products), dropdown with options to search products by price and rating.
 
-    (Board games), dropdown with options for game categories (Family, Strategy,   Party, Classic) and "all board games".
+- (Board games), dropdown with options for game categories (Family, Strategy,   Party, Classic) and "all board games".
     
-    (Role-Playing), dropdown with options for dungeons & dragons, pathfinder and all role-playing games.
+- (Role-Playing), dropdown with options for dungeons & dragons, pathfinder and all role-playing games.
     
-    (On sale), a link for the on sale page.
+- (On sale), a link to the "on sale" page.
 
 
 ### 3.2 Second Phase
+
+Unfortunately, several important concepts are missing from this project due to the deadline submission date.
+
+The Readme file is not completed. The following sections are missing.
+
+3. Features 
+4. Technologies Used
+5. Testing
+6. Search Engine Optimisation
+7. Marketing
+8. Deployment
+9. Credits
+
+Also, features like robox.txt, sitemap and Facebook page still need to be done.
+
+To be continued...
