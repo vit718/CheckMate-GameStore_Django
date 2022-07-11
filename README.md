@@ -35,7 +35,7 @@ A live website can be found [here](https://marcellomuy-checkmate.herokuapp.com/)
 
 ## 1. Ux
 
-As a big fan of game boards, I have always looked online when wanting to buy a new game board. This website will showcase a selection of games for the user to buy in a simple-to-use UI.
+As a big fan of board games, I have always looked online when wanting to buy a new game board. This website will showcase a selection of games for the user to buy in a simple-to-use UI.
 
 ### 1.1 Colour Scheme and Font
 
