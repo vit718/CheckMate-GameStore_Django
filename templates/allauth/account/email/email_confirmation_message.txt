@@ -4,6 +4,6 @@
 
 {% block content %}{% autoescape off %}{% user_display user as user_display %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
 {{ user_display }},
-Thank you for registering for an account.
+Thank you for your registration.
 
 To confirm it was really you, go to {{ activate_url }}{% endblocktrans %}{% endautoescape %}{% endblock %}
