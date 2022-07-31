@@ -56,6 +56,10 @@ a:hover {
     color: #002F33;
 }
 
+.border-radius-03 {
+    border-radius: 0.3rem;
+}
+
 /* ------------------------------- Navbar */
 
 #logo-img {
@@ -129,6 +133,10 @@ input[name=q]::placeholder {
 .newsletter-div {
     background-color: #E6F4F1;
     max-width: 470px;
+}
+
+.asteriskField {
+    display: none;
 }
 
 /* ------------------------------- Products page */
