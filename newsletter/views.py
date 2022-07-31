@@ -16,7 +16,7 @@ def newsletter(request):
             messages.error(
                 request,
                 f"Sorry, {instance.email} already exists in our database.\
-                           Please check and try again.",
+                           Please try again."
             )
             return redirect("home")
         else:
@@ -24,15 +24,16 @@ def newsletter(request):
             messages.success(
                 request,
                 f"Congratulations! {instance.email} \
-                has been added to our mailing list",
+                has been added to our mailing list."
             )
             return redirect("home")
+    else:
+        messages.error(
+            request,
+            "Please enter a valid email address."
+        )
+        return redirect("home")
 
-    template = "home/index.html"
-    context = {
-        "form": form,
-    }
-    return render(request, template, context)
 
 def unsubscribe(request):
     """A view to handle unsubcribing users"""
@@ -44,14 +45,14 @@ def unsubscribe(request):
             Subscriber.objects.filter(email=instance.email).delete()
             messages.success(
                 request,
-                f"{instance.email} has been removed from our mailing list",
+                f"{instance.email} has been removed from our mailing list.",
             )
             return redirect("home")
         else:
             messages.error(
                 request,
                 f"Sorry, {instance.email} cannot be found in our database.\
-                           Please check and try again.",
+                           Please try again.",
             )
 
     template = "newsletter/unsubscribe.html"
