@@ -2,8 +2,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
+from django.db.models import Q, Avg
 from django.db.models.functions import Lower
+from reviews.models import Review
 from .models import Product, Category
 from .forms import ProductForm
 
@@ -75,8 +76,12 @@ def product_detail(request, product_id):
     """ Display products detail page """
 
     product = get_object_or_404(Product, pk=product_id)
-
+    
+    reviews = Review.objects.filter(product=product_id).order_by('-created_at')
+    average = reviews.aggregate(Avg("rating"))["rating__avg"]
+    
     context = {
+        'average': average,
         'product': product,
     }
 
