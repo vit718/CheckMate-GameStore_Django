@@ -128,10 +128,12 @@ class StripeWH_Handler:
                 )
                 for item_id, item_data in json.loads(bag).items():
                     product = Product.objects.get(id=item_id)
+                    on_sale = product.onSale
 
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
+                        onSale=on_sale,
                         quantity=item_data,
                     )
                     order_line_item.save()
