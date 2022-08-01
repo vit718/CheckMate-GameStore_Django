@@ -100,7 +100,7 @@ class OrderLineItem(models.Model):
         """
         # Add price normal price or price on Sale
         if self.onSale:
-            self.lineitem_total = self.product.price_onsale() * self.quantity
+            self.lineitem_total = round(self.product.price_onsale(), 2) * self.quantity
             super().save(*args, **kwargs)
         else:
             self.lineitem_total = self.product.price * self.quantity
