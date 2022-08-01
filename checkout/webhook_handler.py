@@ -84,7 +84,6 @@ class StripeWH_Handler:
         order_exists = False
         attempt = 1
         while attempt <= 5:
-            print("attempting...")
             try:
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,
@@ -100,19 +99,16 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 order_exists = True
-                print("order exists")
                 break
             except Order.DoesNotExist:
                 attempt += 1
-                time.sleep(2)
+                time.sleep(1)
         if order_exists:
-            print("order exists send email")
             self._send_confirmation_email(order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
                 status=200)
         else:
-            print("order doesn't exists")
             order = None
             try:
                 order = Order.objects.create(
@@ -148,7 +144,6 @@ class StripeWH_Handler:
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
         self._send_confirmation_email(order)
-        print("order doesn't exists send email")
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
