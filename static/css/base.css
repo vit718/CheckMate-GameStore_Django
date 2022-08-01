@@ -243,11 +243,11 @@ input[name=q]::placeholder {
 /* ------------------------------- Product Reviews */
 
 .review-card {
-    background-color: #f5dc96;
+    background-color: #E6F4F1;
 }
 
 .reviews-wrapper {
-    height: 550px;
+    max-height: 550px;
     overflow-x: hidden;
     overflow-y: auto;
 }
