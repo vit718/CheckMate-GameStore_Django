@@ -109,12 +109,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                {% if request.user.is_superuser %}
                                 <div class="text-center w-100 mt-2">
                                     <small>
                                         <a class="text-info text-uppercase mr-2 font-weight-bold" href="{% url 'edit_product' product.id %}">Edit</a>
                                         <a class="text-danger text-uppercase ml-2 font-weight-bold" href="{% url 'confirm_delete' product.id %}">Delete</a>
                                     </small>
                                 </div>
+                                {% endif %}
                                 
     
                                 <div class="col-12">
