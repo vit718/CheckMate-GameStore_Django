@@ -76,7 +76,7 @@ def product_detail(request, product_id):
     """ Display products detail page """
 
     product = get_object_or_404(Product, pk=product_id)
-    
+    # Average rating
     reviews = Review.objects.filter(product=product_id).order_by('-created_at')
     average = reviews.aggregate(Avg("rating"))["rating__avg"]
     
