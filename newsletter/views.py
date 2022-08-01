@@ -1,6 +1,9 @@
 """Imported"""
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
 from .models import Subscriber
 from .forms import SubscriberForm
 
@@ -21,6 +24,22 @@ def newsletter(request):
             return redirect("home")
         else:
             instance.save()
+            
+            cust_email = instance.email
+            subject = render_to_string(
+                'newsletter/confirmation_emails/confirmation_email_subject.txt',
+                )
+            body = render_to_string(
+                'newsletter/confirmation_emails/confirmation_email_body.txt',
+                {'contact_email': settings.DEFAULT_FROM_EMAIL})
+            print(settings.DEFAULT_FROM_EMAIL)
+            send_mail(
+                subject,
+                body,
+                settings.DEFAULT_FROM_EMAIL,
+                [cust_email]
+                )
+            
             messages.success(
                 request,
                 f"Congratulations! {instance.email} \
