@@ -90,12 +90,12 @@ class StripeWH_Handler:
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
-                    country__iexact=shipping_details.address.country,
-                    postcode__iexact=shipping_details.address.postal_code,
-                    town_or_city__iexact=shipping_details.address.city,
                     street_address1__iexact=shipping_details.address.line1,
                     street_address2__iexact=shipping_details.address.line2,
+                    postcode__iexact=shipping_details.address.postal_code,
+                    town_or_city__iexact=shipping_details.address.city,
                     county__iexact=shipping_details.address.state,
+                    country__iexact=shipping_details.address.country,                               
                     grand_total=grand_total,
                     original_bag=bag,
                     stripe_pid=pid,
@@ -105,7 +105,7 @@ class StripeWH_Handler:
                 break
             except Order.DoesNotExist:
                 attempt += 1
-                time.sleep(1)
+                time.sleep(2)
         if order_exists:
             print("order exists send email")
             self._send_confirmation_email(order)
@@ -121,12 +121,12 @@ class StripeWH_Handler:
                     user_profile=profile,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
-                    country=shipping_details.address.country,
-                    postcode=shipping_details.address.postal_code,
-                    town_or_city=shipping_details.address.city,
                     street_address1=shipping_details.address.line1,
                     street_address2=shipping_details.address.line2,
+                    postcode=shipping_details.address.postal_code,
+                    town_or_city=shipping_details.address.city,
                     county=shipping_details.address.state,
+                    country=shipping_details.address.country,
                     original_bag=bag,
                     stripe_pid=pid,
                 )
