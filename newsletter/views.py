@@ -27,7 +27,7 @@ def newsletter(request):
             # Send a confirmation email when email is added to the database
             cust_email = instance.email
             subject = render_to_string(
-                'newsletter/confirmation_emails/ \
+                'newsletter/confirmation_emails/\
                 confirmation_email_subject.txt',
                 )
             body = render_to_string(
@@ -66,7 +66,7 @@ def unsubscribe(request):
             # Send a confirmation email when email is deleted from the database
             cust_email = instance.email
             subject = render_to_string(
-                'newsletter/confirmation_emails/ \
+                'newsletter/confirmation_emails/\
                 unsubscribe_email_subject.txt',
                 )
             body = render_to_string(
