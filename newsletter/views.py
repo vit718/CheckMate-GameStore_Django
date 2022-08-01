@@ -24,10 +24,11 @@ def newsletter(request):
             return redirect("home")
         else:
             instance.save()
-            
+            # Send a confirmation email when email is added to the database
             cust_email = instance.email
             subject = render_to_string(
-                'newsletter/confirmation_emails/confirmation_email_subject.txt',
+                'newsletter/confirmation_emails/ \
+                confirmation_email_subject.txt',
                 )
             body = render_to_string(
                 'newsletter/confirmation_emails/confirmation_email_body.txt',
@@ -39,7 +40,7 @@ def newsletter(request):
                 settings.DEFAULT_FROM_EMAIL,
                 [cust_email]
                 )
-            
+
             messages.success(
                 request,
                 f"Congratulations! {instance.email} \
@@ -62,6 +63,22 @@ def unsubscribe(request):
         instance = form.save(commit=False)
         if Subscriber.objects.filter(email=instance.email).exists():
             Subscriber.objects.filter(email=instance.email).delete()
+            # Send a confirmation email when email is deleted from the database
+            cust_email = instance.email
+            subject = render_to_string(
+                'newsletter/confirmation_emails/ \
+                unsubscribe_email_subject.txt',
+                )
+            body = render_to_string(
+                'newsletter/confirmation_emails/unsubscribe_email_body.txt',
+                {'contact_email': settings.DEFAULT_FROM_EMAIL})
+            print(settings.DEFAULT_FROM_EMAIL)
+            send_mail(
+                subject,
+                body,
+                settings.DEFAULT_FROM_EMAIL,
+                [cust_email]
+                )
             messages.success(
                 request,
                 f"{instance.email} has been removed from our mailing list.",

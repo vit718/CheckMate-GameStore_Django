@@ -1,0 +1,11 @@
+Hello There!
+
+You have successfully unsubscribed from our newsletter!
+
+Please click on the link below to resubscribe if this was a mistake.
+
+https://marcellomuy-checkmate.herokuapp.com/
+
+Sincerely,
+
+CheckMate GameStore

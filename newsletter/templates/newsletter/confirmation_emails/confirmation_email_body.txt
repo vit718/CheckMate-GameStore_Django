@@ -2,6 +2,10 @@ Hello There!
 
 Thank you for subscribing to our newsletter!
 
+Please click on the link below to unsubscribe if this was a mistake.
+
+https://marcellomuy-checkmate.herokuapp.com/unsubscribe/
+
 Sincerely,
 
 CheckMate GameStore
