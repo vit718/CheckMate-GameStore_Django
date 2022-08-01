@@ -95,8 +95,7 @@ class StripeWH_Handler:
                     postcode__iexact=shipping_details.address.postal_code,
                     town_or_city__iexact=shipping_details.address.city,
                     county__iexact=shipping_details.address.state,
-                    country__iexact=shipping_details.address.country,                               
-                    grand_total=grand_total,
+                    country__iexact=shipping_details.address.country,                     
                     original_bag=bag,
                     stripe_pid=pid,
                 )
