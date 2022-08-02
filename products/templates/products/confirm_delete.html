@@ -13,6 +13,7 @@
 
 {% block content %}
 <div class="overlay"></div>
+{% if user.is_superuser %}
 <div class="container mb-2">
     <!-- Page title -->
     <div class="row">
@@ -37,9 +38,8 @@
             
         </div>
     </div>
-   
-    
 </div>
+{% endif %}
 {% endblock %}
 
 

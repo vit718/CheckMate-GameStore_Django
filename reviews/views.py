@@ -102,8 +102,15 @@ def delete_review(request, product_id, review_id):
     review = get_object_or_404(
         Review, product=product, id=review_id, user=request.user
         )
-    review.delete()
-    messages.success(
+    context = {
+        'product': product,
+        'review': review,
+    }
+    if request.method == "POST":
+        review.delete()
+        messages.success(
         request, f'You deleted a review for {product.name}'
         )
-    return redirect(reverse('product_reviews', args=[product.id]))
+        return redirect(reverse('product_reviews', args=[product.id]))
+    else:
+        return render(request, 'reviews/delete_review.html', context)

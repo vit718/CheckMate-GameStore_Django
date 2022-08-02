@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_header %}
+<!-- Push content down  -->
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="overlay"></div>
+
+{% if user.is_authenticated %}
+{% if request.user == review.user %}
+<div class="container mb-2">
+    <!-- Page title -->
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <hr>
+            <h2 class="text-dark mb-4">Delete Review</h2>
+            <hr>
+        </div>
+    </div>
+    <p class="text-dark">Are you sure you want to delete this review?</p>
+    <div class="reviews-wrapper text-left mb-3">                     
+        <div class="row card py-2 my-1 review-card mx-2">
+            <div class="col">
+                <h5 class="">Author: {{ review.user.username }}</h5>
+                <h5>Rating: {{ review.rating }} </h5>
+            </div>
+            <div class="col text-justify">
+                <p>{{ review.comment }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form class="text-dark" action="{% url 'delete_review' product.id review.id %}" 
+                method="post" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <a href="{% url 'product_reviews' product.id %}" class="btn btn-outline-dark">Cancel</a>
+                <button class="btn btn-dark-2 hover-white" type="submit">Delete Review</button>
+            </form >
+            
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endif %}
+
+{% endblock %}
