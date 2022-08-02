@@ -1,9 +1,11 @@
 """Imported"""
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib import messages
 from django.db.models import Avg
+from django.contrib.auth.decorators import login_required
 from .models import Product, Review
 from .forms import ReviewForm
-from django.contrib.auth.decorators import login_required
+
 
 
 
@@ -56,3 +58,34 @@ def add_review(request, product_id):
         return redirect(reverse('reviews_form', args=[product.id]))
     else:
         return redirect('accounts:login')
+
+
+@login_required
+def edit_review(request, product_id, review_id):
+    """Edit a product review"""
+    product = get_object_or_404(Product, pk=product_id)
+    review = get_object_or_404(
+        Review, product=product, id=review_id, user=request.user
+        )
+    form = ReviewForm(instance=review)
+    context = {
+        'form': form,
+        'product': product,
+        'review': review,
+    }
+
+    if request.method == "POST":
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            print("edit_no_error")
+            data = form.save(commit=False)
+            data.save()
+            return redirect(reverse(product_reviews, args=[product.id]))
+        else:
+            messages.error(request, 'Please ensure your rating is between 0 and 5')
+            return render(request, 'reviews/edit_review.html', context)
+    else:
+        print("not post")
+    
+    print("outside")
+    return render(request, 'reviews/edit_review.html', context)
