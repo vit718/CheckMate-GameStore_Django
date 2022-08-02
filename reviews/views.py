@@ -77,15 +77,25 @@ def edit_review(request, product_id, review_id):
     if request.method == "POST":
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
-            print("edit_no_error")
             data = form.save(commit=False)
             data.save()
             return redirect(reverse(product_reviews, args=[product.id]))
         else:
-            messages.error(request, 'Please ensure your rating is between 0 and 5')
+            messages.error(
+                request, 'Please ensure your rating is between 0 and 5'
+                )
             return render(request, 'reviews/edit_review.html', context)
     else:
         print("not post")
-    
-    print("outside")
     return render(request, 'reviews/edit_review.html', context)
+
+
+@login_required
+def delete_review(request, product_id, review_id):
+    """Remove a product review"""
+    product = get_object_or_404(Product, pk=product_id)
+    review = get_object_or_404(
+        Review, product=product, id=review_id, user=request.user
+        )
+    review.delete()
+    return redirect(reverse('product_reviews', args=[product.id]))
