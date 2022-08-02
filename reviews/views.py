@@ -52,6 +52,9 @@ def add_review(request, product_id):
             data.user = request.user
             data.product = product
             data.save()
+            messages.success(
+                request, f'You Added a new review for {product.name}'
+                )
             return redirect(reverse('product_reviews', args=[product.id]))
         else:
             form = ReviewForm()
@@ -79,6 +82,9 @@ def edit_review(request, product_id, review_id):
         if form.is_valid():
             data = form.save(commit=False)
             data.save()
+            messages.success(
+                request, f'You edited your review for {product.name}'
+                )
             return redirect(reverse(product_reviews, args=[product.id]))
         else:
             messages.error(
@@ -86,8 +92,7 @@ def edit_review(request, product_id, review_id):
                 )
             return render(request, 'reviews/edit_review.html', context)
     else:
-        print("not post")
-    return render(request, 'reviews/edit_review.html', context)
+        return render(request, 'reviews/edit_review.html', context)
 
 
 @login_required
@@ -98,4 +103,7 @@ def delete_review(request, product_id, review_id):
         Review, product=product, id=review_id, user=request.user
         )
     review.delete()
+    messages.success(
+        request, f'You deleted a review for {product.name}'
+        )
     return redirect(reverse('product_reviews', args=[product.id]))
