@@ -11,7 +11,7 @@ def contactmessage(request):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
-            messages.success(request, messages.INFO, 'Message Submitted.')
+            messages.success(request, 'Message Submitted')
             return redirect('contactmessage')
     else:
         context = {
