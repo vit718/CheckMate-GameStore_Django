@@ -57,8 +57,8 @@
                         </div>
                         <div class="col">
                             {% if request.user == review.user %}
-                                <a href="{% url 'edit_review' product.id review.id %}">Edit</a>
-                                <a href="{% url 'delete_review' product.id review.id %}">Delete</a>
+                                <a class="text-info" href="{% url 'edit_review' product.id review.id %}">Edit</a>
+                                <a class="text-danger" href="{% url 'delete_review' product.id review.id %}">Delete</a>
                             {% endif %}
                         </div>
                     </div>
