@@ -1,3 +1,4 @@
+"""Imported"""
 import uuid
 
 from django.db import models
@@ -80,6 +81,7 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """ A class for products in order """
     order = models.ForeignKey(
         Order, null=False, blank=False,
         on_delete=models.CASCADE, related_name='lineitems'
