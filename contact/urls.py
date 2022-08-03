@@ -3,5 +3,5 @@ from django.urls import path
 from .import views
 
 urlpatterns = [
-    path('contact/', views.contactmessage, name='contactmessage'),
+    path('', views.contactmessage, name='contactmessage'),
 ]

@@ -8,5 +8,5 @@ class ContactMessageForm(forms.ModelForm):
 
     class Meta:
         """Meta for contact form"""
-        model = ContactMessage()
+        model = ContactMessage
         fields = '__all__'

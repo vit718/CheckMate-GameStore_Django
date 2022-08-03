@@ -19,17 +19,15 @@
         <div class="col-12 col-md-6">
             <hr>
             <h2 class="text-dark mb-4">Contact Us</h2>
-            <h5 class="text-muted">Contact Form</h5>
             <hr>
         </div>
     </div>
         <div class="col-12 col-md-6">
-            <form class="text-dark" action="{% url 'delete_product' product.id %}" 
+            <form class="text-dark" action="{% url 'contactmessage' %}" 
                 method="post" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <a href="{% url 'product_detail' product.id %}" class="btn btn-outline-dark">Cancel</a>
-                <button class="btn btn-dark-2 hover-white" type="submit">Delete Product</button>
+                <button class="btn btn-dark-2 hover-white" type="submit">Submit</button>
             </form >
             
         </div>
