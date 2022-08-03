@@ -73,7 +73,7 @@
                         </div>
                         <div class="mt-2">
                             {% if product.onSale %}
-                            <p>Was <strong class="old-price">&euro;{{ product.price }}</strong></p>
+                            <p class="text-muted old-price">Was <strong>&euro;{{ product.price }}</strong></p>
                             <p class="on-sale"><strong>On Sale!</strong></p>
                             <p>Now <strong>&euro;{{ product.price_onsale|floatformat:2 }}</strong></p>
                             {% else %}
