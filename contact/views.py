@@ -12,7 +12,7 @@ def contactmessage(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Message Submitted')
-            return redirect('contactmessage')
+            return redirect('home')
     else:
         context = {
             'form': form
