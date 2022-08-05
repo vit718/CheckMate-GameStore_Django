@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/bag/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/?category=family</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/?category=strategy</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/?category=party</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/?category=classic</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/?category=family,strategy,party,classic</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/?category=d_and_d</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/?category=pathfinder</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/?category=d_and_d,pathfinder</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/on_sale/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/unsubscribe/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/contact</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/18/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/4/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/5/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/20/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/23/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/6/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/28/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/2/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/3/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/1/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/15/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/16/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/21/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/9/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/26/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/19/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/14/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/7/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/30/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/29/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/17/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/24/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/10/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/27/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/25/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/8/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/11/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/13/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/products/22/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/18/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/4/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/5/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/20/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/23/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/6/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/28/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/2/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/3/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/1/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/15/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/16/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/21/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/9/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/26/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/19/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/14/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/7/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/30/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/29/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/17/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/24/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/10/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/27/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/25/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/8/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/11/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/13/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/22/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/18/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/4/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/5/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/20/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/23/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/6/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/28/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/2/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/3/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/1/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/15/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/16/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/21/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/9/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/26/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/19/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/14/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/7/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/30/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/29/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/17/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/24/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/10/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/27/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/25/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/8/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/11/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/13/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://marcellomuy-checkmate.herokuapp.com/reviews/reviews_form/22/</loc>
+  <lastmod>2022-08-05T18:37:20+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
