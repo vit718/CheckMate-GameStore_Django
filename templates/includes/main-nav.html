@@ -6,14 +6,9 @@
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="font-weight-bold text-dark nav-link bigger-font-size mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold text-dark nav-link bigger-font-size mr-5" href="{% url 'products' %}">
                 All Products
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=avgRating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-            </div>
         </li>
 
         <li class="nav-item dropdown">
