@@ -354,8 +354,9 @@ input[name=q]::placeholder {
         padding-top: 80px;
     }
 
-    #carousel-main-1, #carousel-main-2 {
-        font-size: 2rem
+    #carousel-main-1, #carousel-main-2,
+    #onsale-heading, #newsletter-heading {
+        font-size: 3rem
     }
 }
 
