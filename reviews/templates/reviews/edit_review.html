@@ -42,7 +42,12 @@
             <form action="" method="POST">
                 {% csrf_token %}
                 {{ form | crispy }}
-                
+                <a href="{% url 'product_reviews' product.id %}" class="btn btn-outline-dark mt-3">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Cancel</span>
+                </a>
                 <input type="submit" class="btn hover-white add-to-cart-btn mt-3" value="Edit a Review">
             </form>
         </div>

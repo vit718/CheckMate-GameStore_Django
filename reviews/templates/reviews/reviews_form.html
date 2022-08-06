@@ -46,7 +46,7 @@
                 <input type="range" id="rangeInput" name="rating" min="0" max="5" value="0" step="0.5" oninput="amount.value=rangeInput.value">
                 <output name="amount" id="amount" for="rangeInput">0</output>
                 <br>
-                <a href="{% url 'products' %}" class="btn btn-outline-dark mt-3">
+                <a href="{% url 'product_reviews' product.id %}" class="btn btn-outline-dark mt-3">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
