@@ -55,7 +55,7 @@
                                 {{ product.name }}
                             </h2>                               
                         </a>
-                        <div>
+                        <div class="mt-auto">
                             <p class="d-inline mr-1 card ">Age: {{ product.min_age }}+</p>
                             {% if product.min_players %}
                             <p class="d-inline mr-1 card"><i class="fa-solid fa-person"></i>
@@ -64,20 +64,13 @@
                             {% if product.play_time %}
                             <p class="d-inline card"><i class="fa-regular fa-clock"></i> {{ product.play_time }} min</p>
                             {% endif %}
+                            <div class="mt-1">
+                                <p class="text-muted old-price">Was <strong>&euro;{{ product.price }}</strong></p>
+                                <p class="on-sale"><strong>On Sale!</strong></p>
+                                <p>Now <strong>&euro;{{ product.price_onsale|floatformat:2 }}</strong></p>
+                            </div>
                         </div>
-                        <div class="mt-2">
-                            {% if product.avg_rating %}
-                            <p class="d-inline"><i class="star-icon fa-regular fa-star"></i>:{{ product.avgRating }} <a
-                                    href="" class="btn reviews-btn">Reviews</a></p>
-                            {% else %}
-                            <p class="d-inline"><i class="star-icon fa-solid fa-star"></i> <a href=""
-                                    class="btn reviews-btn"> No Reviews</a></p>
-                            {% endif %}
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-muted old-price">Was <strong>&euro;{{ product.price }}</strong></p>
-                            <p class="on-sale"><strong>On Sale!</strong></p>
-                            <p>Now <strong>&euro;{{ product.price_onsale|floatformat:2 }}</strong></p>
+                        <div class="mt-auto">
                             <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">	
                                 {% csrf_token %}	
                                 <input type="hidden" name="quantity" value="1" min="1" max="1" 	
