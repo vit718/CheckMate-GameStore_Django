@@ -247,12 +247,21 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
 * Products page
 
+    The HTML validator found four errors in the products page HTML code:
+
   * Error:
 
     ![Products-error-1](/readme_files/validation/validation-products-page-error-1.png)
-    ![Products-error-1](/readme_files/validation/validation-products-page-error-2.png)
-    * Fix - Removed "min" and "max" atributes.
+    ![Products-error-2](/readme_files/validation/validation-products-page-error-2.png)
+    ![Products-error-3](/readme_files/validation/validation-products-page-error-3.png)
+    * Fix - Removed "min" and "max" atributes from input element.
+    * fix - Removed type attribute from script tags.
 
+    * All validation errors were fixed.
+
+    ![Products-fixed](/readme_files/validation/validation-products-page-no-errors.png)
+
+* 
 #### 5.1.2 CSS
 
 #### 5.1.3 JavaScript
