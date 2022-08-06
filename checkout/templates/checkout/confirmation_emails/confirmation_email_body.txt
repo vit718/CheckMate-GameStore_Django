@@ -5,8 +5,8 @@ Your order is confirmed and will be delivered to {{ order.street_address1 }} in 
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 Order Total:€{{ order.order_total }}
-Delivery: €{{ order.delivery_cost }}
-Grand Total: €{{ order.grand_total }}
+Delivery: €{{ order.delivery_cost|floatformat:2 }}
+Grand Total: €{{ order.grand_total|floatformat:2 }}
 
 Please contact us if you have any questions {{ contact.email }}.
 
@@ -14,4 +14,4 @@ Thank you for shopping with us!
 
 Sincerely,
 
-CheckMate GameStore
+CheckMate Game Store
