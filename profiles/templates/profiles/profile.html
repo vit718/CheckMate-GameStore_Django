@@ -22,13 +22,13 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="text-dark mb-4">My Profile</h2>
+            <h1 class="text-dark mb-4">My Profile</h1>
             <hr>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-lg-6">
-            <p class="text-dark">Delivery Information</p>
+            <h2 class="h5 text-dark font-weight-bold">Delivery Information</h2>
             <form action="{% url 'profile' %}" method="post" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy}}
@@ -37,7 +37,7 @@
             </form>
         </div>
         <div class="col-12 col-lg-6">
-            <p class="text-dark">Order History</p>
+            <h2 class="h5 text-dark font-weight-bold">Order History</h2>
             <table class="table table-sm table-borderless">
                 <thead>
                     <tr>

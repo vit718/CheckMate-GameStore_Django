@@ -14,8 +14,15 @@
 {% block content %}
 
 <div>
-    <div class="newsletter-div my-4 border-radius-03 mx-auto px-2 py-2">
-        <h5>Enter your email address below to unsubscribe from our newsletter.</h5>
+    <div class="text-center newsletter-div my-4 border-radius-03 mx-auto px-2 py-2">
+        <div class="row">
+            <div class="col-12">
+                <hr>
+                <h1 class="text-dark mb-4">Unsubscribe</h1>
+                <hr>
+            </div>
+        </div>
+        <h2 class="h5">Enter your email address below to unsubscribe from our newsletter.</h2>
         <form action="{% url 'unsubscribe' %}" method="POST">
             <div class="mb-3 text-center">
                 {% csrf_token %}
