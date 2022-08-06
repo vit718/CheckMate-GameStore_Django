@@ -84,6 +84,8 @@ User stories are divided into 6 EPIC labels.
 
 ### 1.4 User Stories
 
+All 29 user stories were implemented.
+
 * Viewing the webpage
 
 ![Viewing](/readme_files/user-stories/user-story-viewing-the-webpage.png)
@@ -105,12 +107,6 @@ User stories are divided into 6 EPIC labels.
 ![Viewing](/readme_files/user-stories/user-story-admin.png)
 
 * Interacting and engaging
-
-Not all CRUD functionality was implemented for the "reviews" user story.
-
-The user can leave a review, but editing and deleting were not implemented and will be dealt with in the second phase of this project.
-
-The "contact us" functionality will be implemented in the second phase of this project.
 
 ![Interacting](/readme_files/user-stories/user-story-interacting.png)
 
@@ -226,20 +222,20 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
   * Error:
 
     ![Home-error-1](/readme_files/validation/validation-home-page-error-1.png)
-  * Fix - Inserted list items of mobile navbar inside a ul element.
+    * Fix - Inserted list items of mobile navbar inside a ul element.
   
   * Error:
 
     ![Home-error-2](/readme_files/validation/validation-index-page-error-2.png)
-  * Fix - Gave a unique id for "a" tag in the mobile header.
+    * Fix - Gave a unique id for "a" tag in the mobile header.
   
   * Error:
 
     ![Home-error-3](/readme_files/validation/validation-index-page-error-3.png)
-  * Fix - Correct "href" path of "my profile" link in the mobile version of the navbar.
-  * Fix - Removed Unused id from the carousel div.
-  * Fix - Removed duplicated class from newsletter input element.
-  * Fix - Removed type attribute from script tags.
+    * Fix - Correct "href" path of "my profile" link in the mobile version of the navbar.
+    * Fix - Removed Unused id from the carousel div.
+    * Fix - Removed duplicated class from newsletter input element.
+    * Fix - Removed type attribute from script tags.
 
   * All validation errors were fixed.
 
@@ -255,9 +251,9 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
     ![Products-error-2](/readme_files/validation/validation-products-page-error-2.png)
     ![Products-error-3](/readme_files/validation/validation-products-page-error-3.png)
     * Fix - Removed "min" and "max" atributes from input element.
-    * fix - Removed type attribute from script tags.
+    * Fix - Removed type attribute from script tags.
 
-    * All validation errors were fixed.
+  * All validation errors were fixed.
 
     ![Products-fixed](/readme_files/validation/validation-products-page-no-errors.png)
 
