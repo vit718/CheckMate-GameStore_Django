@@ -51,7 +51,7 @@
                 <h2 id="onsale-heading" class="text-background display-4 text-black">
                     On sale!
                 </h2>
-                <div id="on-sale-div w-100" class="my-2">
+                <div class="my-2">
                     <a href="{% url 'on_sale' %}">
                         <img class="img-fluid border-radius-03" src="https://marcellomuy-checkmate.s3.eu-west-1.amazonaws.com/media/flash-sale.png" alt="Products half price, on sale image.">
                     </a>
@@ -69,8 +69,8 @@
                         <div class="mb-3 text-dark">
                             {% csrf_token %}
                             {{ sub_form|crispy }}
-                            <input class="btn btn-dark-2 hover-white text-uppercase px-3"
-                             type="submit" value="Subscribe" class="btn btn-primary">
+                            <input class="btn btn-primary btn-dark-2 hover-white text-uppercase px-3"
+                             type="submit" value="Subscribe">
                         </div>
                     </form>
                     <p class="text-dark">If you want to unsubscribe please click <a class="text-danger" href="{% url 'unsubscribe' %}">here</a></p>

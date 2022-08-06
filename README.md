@@ -219,9 +219,16 @@ Under the search bar there are 5 links.
 
 * Home page
 
-  * Error![Home](/readme_files/validation/validation-home-page-error.png)
-  * Fix: Insert list items of mobile navbar inside a ul element.
-  
+  * Error![Home-1](/readme_files/validation/validation-home-page-error.png)
+  * Fix: Inserted list items of mobile navbar inside a ul element.
+  * Error![Home-2](/readme_files/validation/validation-index-page-error-2.png)
+  * Fix: Gave a unique id for "a" tag in the mobile header.
+  * Error![Home-3](/readme_files/validation/validation-index-page-error-3.png)
+  * Fix: Correct "href" path of "my profile" link in the mobile version of the navbar.
+  * Fix: Removed Unused id from the carousel div.
+  * Fix: Removed duplicated class from newsletter input element.
+  * Fix: Removed type attribute from script tags.
+
 #### 5.1.2 CSS
 
 #### 5.1.3 JavaScript
