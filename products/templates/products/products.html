@@ -87,11 +87,11 @@
                             {% endif %}
                             <div class="mt-1">
                             {% if product.onSale %}
-                            <p class="mb-0">Was <strong class="text-muted old-price">&euro;{{ product.price }}</strong></p>
                             <p class="on-sale"><strong>On Sale!</strong></p>
-                            <p>Now <strong>&euro;{{ product.price_onsale|floatformat:2 }}</strong></p>
+                            <p class="h5">Now <strong>&euro;{{ product.price_onsale|floatformat:2 }}</strong></p>
+                            <p class="text-muted old-price">Was <strong>&euro;{{ product.price }}</strong></p>
                             {% else %}
-                            <p><strong>&euro;{{ product.price }}</strong></p>
+                            <p class="h5"><strong>&euro;{{ product.price }}</strong></p>
                             {% endif %}
                             </div>
                         </div>

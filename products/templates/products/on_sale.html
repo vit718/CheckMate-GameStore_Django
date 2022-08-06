@@ -65,9 +65,9 @@
                             <p class="d-inline card"><i class="fa-regular fa-clock"></i> {{ product.play_time }} min</p>
                             {% endif %}
                             <div class="mt-1">
-                                <p class="text-muted old-price">Was <strong>&euro;{{ product.price }}</strong></p>
                                 <p class="on-sale"><strong>On Sale!</strong></p>
-                                <p>Now <strong>&euro;{{ product.price_onsale|floatformat:2 }}</strong></p>
+                                <p class="h5">Now <strong>&euro;{{ product.price_onsale|floatformat:2 }}</strong></p>
+                                <p class="text-muted old-price">Was <strong>&euro;{{ product.price }}</strong></p>
                             </div>
                         </div>
                         <div class="mt-auto">
