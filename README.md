@@ -220,18 +220,38 @@ Under the search bar there are 5 links.
 To validate the HTML code, I clicked on "view page source" on the deployed application page that I wanted to inspect and copied the source code into the W3C validator.
 
 * Home page
-The HTML validator found six errors in the home page:
-  * Error:![Home-error-1](/readme_files/validation/validation-home-page-error.png)
-  * Fix: Inserted list items of mobile navbar inside a ul element.
-  * Error:![Home-error-2](/readme_files/validation/validation-index-page-error-2.png)
-  * Fix: Gave a unique id for "a" tag in the mobile header.
-  * Error:![Home-error-3](/readme_files/validation/validation-index-page-error-3.png)
-  * Fix: Correct "href" path of "my profile" link in the mobile version of the navbar.
-  * Fix: Removed Unused id from the carousel div.
-  * Fix: Removed duplicated class from newsletter input element.
-  * Fix: Removed type attribute from script tags.
 
-  * All validation errors were fixed.![Home-fixed](/readme_files/validation/validation-index-page-no-errors.png)
+    The HTML validator found seven errors in the home page HTML code:
+  
+  * Error:
+
+    ![Home-error-1](/readme_files/validation/validation-home-page-error-1.png)
+  * Fix - Inserted list items of mobile navbar inside a ul element.
+  
+  * Error:
+
+    ![Home-error-2](/readme_files/validation/validation-index-page-error-2.png)
+  * Fix - Gave a unique id for "a" tag in the mobile header.
+  
+  * Error:
+
+    ![Home-error-3](/readme_files/validation/validation-index-page-error-3.png)
+  * Fix - Correct "href" path of "my profile" link in the mobile version of the navbar.
+  * Fix - Removed Unused id from the carousel div.
+  * Fix - Removed duplicated class from newsletter input element.
+  * Fix - Removed type attribute from script tags.
+
+  * All validation errors were fixed.
+
+    ![Home-fixed](/readme_files/validation/validation-index-page-no-errors.png)
+
+* Products page
+
+  * Error:
+
+    ![Products-error-1](/readme_files/validation/validation-products-page-error-1.png)
+    ![Products-error-1](/readme_files/validation/validation-products-page-error-2.png)
+    * Fix - Removed "min" and "max" atributes.
 
 #### 5.1.2 CSS
 
