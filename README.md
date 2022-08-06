@@ -20,14 +20,14 @@ A live website can be found [here](https://marcellomuy-checkmate.herokuapp.com/)
     * [Second Phase](#second-phase)
 4. [Technologies Used](#technologies-used)
 5. [Testing](#testing)
+    * [Validation](#validation)
+        * [HTML](#html)
+        * [CSS](#css)
+        * [JaveScript](#javascript)
+        * [Python](#python)
+    * [Manual Testing](#user-story-testing)
+        * [Home page](#home-page)
     * [Bugs](#bugs)
-    * [User Story Testing](#user-story-testing)
-        * [EPIC 1 Testing](#epic-1-testing)
-        * [EPIC 2 Testing](#epic-2-testing)
-        * [EPIC 3 Testing](#epic-3-testing)
-        * [EPIC 4 Testing](#epic-4-testing)
-        * [EPIC 5 Testing](#epic-5-testing)
-        * [EPIC 6 Testing](#epic-6-testing)
 6. [Search Engine Optimisation](#search-engine-optimisation)
 7. [Marketing](#marketing)
 8. [Deployment](#deployment)
@@ -84,27 +84,27 @@ User stories are divided into 6 EPIC labels.
 
 ### 1.4 User Stories
 
-- Viewing the webpage
+* Viewing the webpage
 
 ![Viewing](/readme_files/user-stories/user-story-viewing-the-webpage.png)
 
-- Filtering and searching
+* Filtering and searching
 
 ![Viewing](/readme_files/user-stories/user-story-filtering-and-searching.png)
 
-- Buying a product
+* Buying a product
 
 ![Viewing](/readme_files/user-stories/user-story-buying-product.png)
 
-- Registration / Accounts
+* Registration / Accounts
 
 ![Viewing](/readme_files/user-stories/user-story-registration-and-account.png)
 
-- Admin and store management
+* Admin and store management
 
 ![Viewing](/readme_files/user-stories/user-story-admin.png)
 
-- Interacting and engaging
+* Interacting and engaging
 
 Not all CRUD functionality was implemented for the "reviews" user story.
 
@@ -118,7 +118,7 @@ The "contact us" functionality will be implemented in the second phase of this p
 
 Data models used in this project:
 
-- Products app
+* Products app
 
 ```python
 class Product(models.Model):
@@ -146,7 +146,7 @@ class Product(models.Model):
         return self.name
 ```
 
-- Reviews app
+* Reviews app
 
 ```python
 class Review(models.Model):
@@ -163,7 +163,7 @@ class Review(models.Model):
         return self.user.username
 ```
 
-- Newsletter app
+* Newsletter app
 
 ```python
 class Subscriber(models.Model):
@@ -177,15 +177,16 @@ class Subscriber(models.Model):
 ```
 
 The following apps have their data models based on the Boutique Ado project.
-- bag app
-- checkout app
-- profiles app
+
+* bag app
+* checkout app
+* profiles app
 
 ## 3. Features
 
 ### 3.1 First Phase
 
-- Navbar 
+* Navbar
 
 ![Navbar](/readme_files/features/features-navbar.png)
 
@@ -198,31 +199,31 @@ Also on the right is a shopping cart icon that works as a link for the shopping 
 
 Under the search bar there are 5 links.
 
-- (Home), a link to the "home" page
+* (Home), a link to the "home" page
 
-- (All products), dropdown with options to search products by price and rating.
+* (All products), dropdown with options to search products by price and rating.
 
-- (Board games), dropdown with options for game categories (Family, Strategy,   Party, Classic) and "all board games".
-    
-- (Role-Playing), dropdown with options for dungeons & dragons, pathfinder and all role-playing games.
-    
-- (On sale), a link to the "on sale" page.
+* (Board games), dropdown with options for game categories (Family, Strategy,   Party, Classic) and "all board games".
 
+* (Role-Playing), dropdown with options for dungeons & dragons, pathfinder and all role-playing games.
+
+* (On sale), a link to the "on sale" page.
 
 ### 3.2 Second Phase
 
-Unfortunately, several important concepts are missing from this project due to the deadline submission date.
+## 5 Testing
 
-The Readme file is not completed. The following sections are missing.
+### 5.1 Validation
 
-3. Features 
-4. Technologies Used
-5. Testing
-6. Search Engine Optimisation
-7. Marketing
-8. Deployment
-9. Credits
+#### 5.1.1 HTML
 
-Also, features like robox.txt, sitemap and Facebook page still need to be done.
+* Home page
 
-To be continued...
+  * Error![Home](/readme_files/validation/validation-home-page-error.png)
+  * Fix: Insert list items of mobile navbar inside a ul element.
+  
+#### 5.1.2 CSS
+
+#### 5.1.3 JavaScript
+
+#### 5.1.4 Python
