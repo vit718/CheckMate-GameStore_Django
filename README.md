@@ -221,17 +221,17 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
   
   * Error:
 
-    ![Home-error-1](/readme_files/validation/validation-home-page-error-1.png)
+    ![Home-error-1](/readme_files/validation/home/validation-home-page-error-1.png)
     * Fix - Inserted list items of mobile navbar inside a ul element.
   
   * Error:
 
-    ![Home-error-2](/readme_files/validation/validation-index-page-error-2.png)
+    ![Home-error-2](/readme_files/validation/home/validation-index-page-error-2.png)
     * Fix - Gave a unique id for "a" tag in the mobile header.
   
   * Error:
 
-    ![Home-error-3](/readme_files/validation/validation-index-page-error-3.png)
+    ![Home-error-3](/readme_files/validation/home/validation-index-page-error-3.png)
     * Fix - Correct "href" path of "my profile" link in the mobile version of the navbar.
     * Fix - Removed Unused id from the carousel div.
     * Fix - Removed duplicated class from newsletter input element.
@@ -239,7 +239,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
   * All validation errors were fixed.
 
-    ![Home-fixed](/readme_files/validation/validation-index-page-no-errors.png)
+    ![Home-fixed](/readme_files/validation/home/validation-index-page-no-errors.png)
 
 * Products page
 
@@ -247,17 +247,27 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
   * Error:
 
-    ![Products-error-1](/readme_files/validation/validation-products-page-error-1.png)
-    ![Products-error-2](/readme_files/validation/validation-products-page-error-2.png)
-    ![Products-error-3](/readme_files/validation/validation-products-page-error-3.png)
+    ![Products-error-1](/readme_files/validation/products/validation-products-page-error-1.png)
+    ![Products-error-2](/readme_files/validation/products/validation-products-page-error-2.png)
+    ![Products-error-3](/readme_files/validation/products/validation-products-page-error-3.png)
     * Fix - Removed "min" and "max" atributes from input element.
     * Fix - Removed type attribute from script tags.
 
   * All validation errors were fixed.
 
-    ![Products-fixed](/readme_files/validation/validation-products-page-no-errors.png)
+    ![Products-fixed](/readme_files/validation/products/validation-products-page-no-errors.png)
 
-* 
+* On Sale Page
+
+  The HTML validator found four errors in the On Sale page Html code:
+  
+  Two errors for the "min" and "max" attribute of the "input" element and two errors for the unnecessary "type" attribute in the JavaScript tags.
+
+  All validation errors were fixed.
+
+   ![On-sale-fixed](/readme_files/validation/products/validation-on-sale-page-no-errors.png)
+
+
 #### 5.1.2 CSS
 
 #### 5.1.3 JavaScript
