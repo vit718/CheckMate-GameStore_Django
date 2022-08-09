@@ -290,11 +290,32 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
   When trying to edit a review, the following error was found:
 
-  ![Product-edit-review-page](/readme_files/validation/reviews/validation-reviews-edit-20review-page-error1.png)
+  ![Product-edit-review-page](/readme_files/validation/reviews/validation-reviews-edit-review-page-error1.png)
 
   When deleting a review, the folowing error was found:
 
   ![Product-delete-review](/readme_files/validation/reviews/validation-reviews-page-delete-error.png)
+
+  All validation errors were fixed.
+
+* Contact us page
+
+  The HTML validator found Two errors in the contact us page HTML code
+
+  * Error:
+
+    ![Contact-us-page-error](/readme_files/validation/contact/validation-contact-us-error.png)
+
+    * Fix: Removed duplicated class attribute.
+    * Fix: Removed stray "div" tag.
+
+    
+
+
+
+
+
+
 
 #### 5.1.2 CSS
 
