@@ -309,7 +309,11 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
     * Fix: Removed duplicated class attribute.
     * Fix: Removed stray "div" tag.
 
-    
+
+  All validation errors were fixed.
+
+    ![Contact-us-page-no-errors](/readme_files/validation/contact/validation-contact-us-no-errors.png)
+
 
 
 
