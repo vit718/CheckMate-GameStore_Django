@@ -300,8 +300,8 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
 * Contact us page
 
-  The HTML validator found Two errors in the contact us page HTML code
-
+  The HTML validator found Two errors in the contact us page HTML code.
+  
   * Error:
 
     ![Contact-us-page-error](/readme_files/validation/contact/validation-contact-us-error.png)
@@ -309,12 +309,23 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
     * Fix: Removed duplicated class attribute.
     * Fix: Removed stray "div" tag.
 
-
   All validation errors were fixed.
 
     ![Contact-us-page-no-errors](/readme_files/validation/contact/validation-contact-us-no-errors.png)
 
+* Unsubscribe page
 
+  The HTML validator found Two errors in the contact us page HTML code.
+
+* Error:
+
+  ![Unsubscribe-page-error](/readme_files/validation/home/validation-unsubscribe-error.png)
+
+  * Fix: Removed unclosed "div".
+
+  All validation errors were fixed.
+
+    ![Unsubscribe-page-no-errors](/readme_files/validation/home/validation-unsubscribe-no-errors.png)
 
 
 
