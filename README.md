@@ -277,6 +277,16 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
     ![Product-details-fixed](/readme_files/validation/products/validation-product-details-page-no-errors.png)
 
+* Product reviews page
+
+  The HTML validator found four errors in the product reviews page HTML code.
+  When the product had no reviews, the following error was found:
+
+  ![Product-reviews-no-reviews](/readme_files/validation/reviews/validation-reviews-no-reviews-page-error1.png)
+
+  When Trying to leave a new review, the following error was found:
+  
+  ![Product-add-new-review](/readme_files/validation/reviews/validation-reviews-add-new-review-page-error1.png)
 #### 5.1.2 CSS
 
 #### 5.1.3 JavaScript

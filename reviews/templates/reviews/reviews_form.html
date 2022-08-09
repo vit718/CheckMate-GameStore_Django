@@ -14,7 +14,7 @@
 {% block content %}
 <!-- Gives a the page a white background -->
 <div class="overlay"></div>
-<!-- Products page -->
+<!-- Add a new review page -->
 <div class="container">
     <div class="row">
         <div class="col text-center">
@@ -23,6 +23,7 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
+    <!-- Product image -->
     <div class="row text-dark">
         <div class="col-10 col-lg-6 mx-auto">
             <div class="p-3 w-100">
@@ -37,12 +38,13 @@
                 {% endif %}
             </div>
         </div>
+        <!-- Reviews form -->
         <div class="col-10 col-lg-6 mx-auto text-center">
             <form action="{% url 'add_review' product.id %}" method="POST">
                 {% csrf_token %}
                 <label for="comment">Review</label>
                 <textarea name="comment" id="comment" cols="30" rows="5" class="form-control"></textarea>
-                <label for="rating">Rating</label>
+                <label for="rangeInput">Rating</label>
                 <input type="range" id="rangeInput" name="rating" min="0" max="5" value="0" step="0.5" oninput="amount.value=rangeInput.value">
                 <output name="amount" id="amount" for="rangeInput">0</output>
                 <br>

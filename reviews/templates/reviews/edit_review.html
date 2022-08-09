@@ -15,7 +15,7 @@
 {% block content %}
 <!-- Gives a the page a white background -->
 <div class="overlay"></div>
-<!-- Products page -->
+<!-- Edit a review page -->
 <div class="container">
     <div class="row">
         <div class="col text-center">
@@ -24,6 +24,7 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
+    <!-- Product image -->
     <div class="row text-dark">
         <div class="col-10 col-lg-6 mx-auto">
             <div class="p-3 w-100">
@@ -38,6 +39,7 @@
                 {% endif %}
             </div>
         </div>
+        <!-- Reviews form -->
         <div class="col-10 col-lg-6 mx-auto text-center">
             <form action="" method="POST">
                 {% csrf_token %}
