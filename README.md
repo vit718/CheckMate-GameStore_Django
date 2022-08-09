@@ -284,9 +284,18 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
   ![Product-reviews-no-reviews](/readme_files/validation/reviews/validation-reviews-no-reviews-page-error1.png)
 
-  When Trying to leave a new review, the following error was found:
+  When trying to leave a new review, the following error was found:
   
   ![Product-add-new-review](/readme_files/validation/reviews/validation-reviews-add-new-review-page-error1.png)
+
+  When trying to edit a review, the following error was found:
+
+  ![Product-edit-review-page](/readme_files/validation/reviews/validation-reviews-edit-20review-page-error1.png)
+
+  When deleting a review, the folowing error was found:
+
+  ![Product-delete-review](/readme_files/validation/reviews/validation-reviews-page-delete-error.png)
+
 #### 5.1.2 CSS
 
 #### 5.1.3 JavaScript

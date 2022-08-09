@@ -44,8 +44,8 @@
     <div class="row">
         <!-- Form -->
         <div class="col-12 col-md-6">
-            <form class="text-dark" action="{% url 'delete_review' product.id review.id %}" 
-                method="post" class="form mb-2" enctype="multipart/form-data">
+            <form class="text-dark form mb-2" action="{% url 'delete_review' product.id review.id %}" 
+                method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <a href="{% url 'product_reviews' product.id %}" class="btn btn-outline-dark">Cancel</a>
