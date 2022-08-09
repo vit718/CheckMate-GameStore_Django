@@ -14,7 +14,7 @@
 {% block content %}
 <!-- Gives a the page a white background -->
 <div class="overlay"></div>
-<!-- Products page -->
+<!-- Products reviews page -->
 <div class="container">
     <div class="row">
         <div class="col text-center">
@@ -23,6 +23,7 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
+    <!-- Product image -->
     <div class="row text-dark">
         <div class="col-10 col-lg-6 mx-auto">
             <div class="p-3 w-100">
@@ -38,15 +39,18 @@
             </div>
         </div>
         <div class="col-10 col-lg-6 mx-auto text-center">
+            <!-- Check for Reviews -->
+            <!-- Product info -->
             {% if reviews %}
             <h2>{{ product.name }}</h2>
             <h3>Overall Rating: <i class="star-icon fa-solid fa-star"></i> {{ average|floatformat:2 }}</h3>
+                {% else %}
+                {% endif %}
             <div>
-            {% else %}
-            {% endif %}
+                <!-- Product reviews -->
                 {% if reviews %}
                 <div class="reviews-wrapper text-left">
-                    {% for review in reviews %}                        
+                    {% for review in reviews %}
                     <div class="row card py-2 my-1 review-card mx-2">
                         <div class="col">
                             <p class="font-weight-bold">Author: {{ review.user.username }}</p>
@@ -56,9 +60,10 @@
                             <p>{{ review.comment }}</p>
                         </div>
                         <div class="col">
+                            <!-- Control access to edit and delete buttons -->
                             {% if request.user == review.user %}
-                                <a class="text-info" href="{% url 'edit_review' product.id review.id %}">Edit</a>
-                                <a class="text-danger" href="{% url 'delete_review' product.id review.id %}">Delete</a>
+                            <a class="text-info" href="{% url 'edit_review' product.id review.id %}">Edit</a>
+                            <a class="text-danger" href="{% url 'delete_review' product.id review.id %}">Delete</a>
                             {% endif %}
                         </div>
                     </div>
@@ -71,21 +76,26 @@
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
-                    <a href="{% url 'reviews_form' product.id %}" class="btn hover-white add-to-cart-btn mt-3"> Leave a Review </a>
+                    <a href="{% url 'reviews_form' product.id %}" class="btn hover-white add-to-cart-btn mt-3">
+                        Leave a Review
+                    </a>
                 </div>
-               
-                
+
+
                 {% else %}
-                    <p>This product doesn't have a review yet.</p>
-                    <div class="col-12">
-                        <a href="{% url 'products' %}" class="btn btn-outline-dark mt-3">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="text-uppercase">Keep Shopping</span>
-                        </a>
-                        <a href="{% url 'reviews_form' product.id %}" class="btn hover-white add-to-cart-btn mt-3"> Leave a Review </a>
-                    </div>
+                <!-- if no reviews -->
+                <p>This product doesn't have a review yet.</p>
+                <div class="col-12">
+                    <a href="{% url 'products' %}" class="btn btn-outline-dark mt-3">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                    <a href="{% url 'reviews_form' product.id %}" class="btn hover-white add-to-cart-btn mt-3">
+                        Leave a Review
+                    </a>
+                </div>
                 {% endif %}
             </div>
         </div>
