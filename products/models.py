@@ -24,7 +24,8 @@ class Product(models.Model):
     """
     A model for storing Product information
     """
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -39,6 +40,7 @@ class Product(models.Model):
     onSale = models.BooleanField(default=False)
 
     def price_onsale(self):
+        """Function to calculate price on sale"""
         return self.price - ((self.price * 50) / 100)
 
     def __str__(self):
