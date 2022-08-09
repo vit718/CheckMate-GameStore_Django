@@ -257,16 +257,25 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
     ![Products-fixed](/readme_files/validation/products/validation-products-page-no-errors.png)
 
-* On Sale Page
+* On Sale page
 
-  The HTML validator found four errors in the On Sale page Html code:
-  
-  Two errors for the "min" and "max" attribute of the "input" element and two errors for the unnecessary "type" attribute in the JavaScript tags.
+  The HTML validator found four errors in the On Sale page HTML code:
+
+  Two errors for the "min" and "max" attribute of the "input" element and two errors for the unnecessary "type" attribute in the script tags.
 
   All validation errors were fixed.
 
-   ![On-sale-fixed](/readme_files/validation/products/validation-on-sale-page-no-errors.png)
+    ![On-sale-fixed](/readme_files/validation/products/validation-on-sale-page-no-errors.png)
 
+* Product details page
+
+  The HTML validator found one error in the product details page HTML code:
+  
+  The unnecessary "type" attribute was removed from the script tag.
+
+  All validation errors were fixed.
+
+    ![Product-details-fixed](/readme_files/validation/products/validation-product-details-page-no-errors.png)
 
 #### 5.1.2 CSS
 
