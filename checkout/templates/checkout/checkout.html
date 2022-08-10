@@ -56,14 +56,14 @@
                     </div>
                      <!-- Displays subtotal for products on Sale  -->
                      {% if item.product.onSale %}
-                     <td class="col-3 text-right">
+                     <div class="col-3 text-right">
                          <p class="my-0 small text-muted">&euro;{{ item.product.price_onsale|calc_subtotal:item.quantity|floatformat }}0</p>
-                     </td>
+                     </div>
                      {% else %}
                      <!-- Displays subtotal for general products -->
-                     <td class="col-3 text-right">
+                     <div class="col-3 text-right">
                          <p class="my-0 small text-muted">&euro;{{ item.product.price|calc_subtotal:item.quantity }}</p>
-                     </td>
+                     </div>
                      {% endif %}
                 </div>
             {% endfor %}
@@ -105,7 +105,7 @@
                             <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
                         {% else %}
-                            <label class="form-check-label" for="id-save-info">
+                            <label class="form-check-label">
                                 <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
                                 <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                             </label>
@@ -149,11 +149,11 @@
 </div>
 
 <div id="loading-overlay">
-    <h1 class="text-light loading-spinner">
+    <div class="h1 text-light loading-spinner">
         <span class="icon">
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>
         </span>
-    </h1>
+    </div>
 </div>
 {% endblock %}
 

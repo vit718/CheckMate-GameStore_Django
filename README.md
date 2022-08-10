@@ -306,8 +306,8 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
     ![Contact-us-page-error](/readme_files/validation/contact/validation-contact-us-error.png)
 
-    * Fix: Removed duplicated class attribute.
-    * Fix: Removed stray "div" tag.
+    * Fix - Removed duplicated class attribute.
+    * Fix - Removed stray "div" tag.
 
   All validation errors were fixed.
 
@@ -321,7 +321,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
     ![Unsubscribe-page-error](/readme_files/validation/home/validation-unsubscribe-error.png)
 
-    * Fix: Removed unclosed "div".
+    * Fix - Removed unclosed "div".
 
   All validation errors were fixed.
 
@@ -351,7 +351,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
     ![My-profile-errors](/readme_files/validation/profile/validation-profile-errors.png)
   
-    * Fix: Added closing "div" tag.
+    * Fix - Added closing "div" tag.
 
   All validation errors were fixed.
 
@@ -362,6 +362,31 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
   The validator found no errors in the "login" and "logout" templates.
 
 * Shopping cart page
+
+  The validator found no errors in the shopping cart  HTML code.
+
+    ![Shoooing-cart-no-errors](/readme_files/validation/shopping_cart/validation-shopping-cart-no-errors.png)
+
+* Checkout page
+
+  The validator found 4 errors in the checkout page HTML code.
+
+  * Error:
+
+    ![checkout-errors](/readme_files/validation/checkout/validation-checkout-errors.png)
+
+    * Fix - Use "div" elements instead "td" elements.
+    * Fix - Use "div" element instead "h1" and added "h1" bootstrap class to keep the heading style.
+    * Fix - Removed "for" attribute from the label.
+
+  All validation errors were fixed.
+
+    ![checkout-no-errors](/readme_files/validation/checkout/validation-checkout-no-errors.png)
+
+  The validator found no errors in the checkout success page.
+
+    ![checkout-no-errors](/readme_files/validation/checkout/validation-checkout-success-no-errors.png)
+
   
 
 #### 5.1.2 CSS
