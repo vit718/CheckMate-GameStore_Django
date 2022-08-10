@@ -357,6 +357,13 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
     ![My-profile-no-errors](/readme_files/validation/profile/validation-profile-no-errors.png)
 
+* Allauth templates
+
+  The validator found no errors in the "login" and "logout" templates.
+
+* Shopping cart page
+  
+
 #### 5.1.2 CSS
 
 #### 5.1.3 JavaScript
