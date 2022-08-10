@@ -217,7 +217,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
 * Home page
 
-    The HTML validator found seven errors in the home page HTML code:
+    The validator found seven errors in the home page HTML code:
   
   * Error:
 
@@ -243,7 +243,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
 * Products page
 
-    The HTML validator found four errors in the products page HTML code:
+    The validator found four errors in the products page HTML code:
 
   * Error:
 
@@ -259,7 +259,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
 * On Sale page
 
-  The HTML validator found four errors in the On Sale page HTML code:
+  The validator found four errors in the On Sale page HTML code:
 
   Two errors for the "min" and "max" attribute of the "input" element and two errors for the unnecessary "type" attribute in the script tags.
 
@@ -269,7 +269,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
 * Product details page
 
-  The HTML validator found one error in the product details page HTML code:
+  The validator found one error in the product details page HTML code:
   
   The unnecessary "type" attribute was removed from the script tag.
 
@@ -279,7 +279,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
 * Product reviews page
 
-  The HTML validator found four errors in the product reviews page HTML code.
+  The validator found four errors in the product reviews page HTML code.
   When the product had no reviews, the following error was found:
 
     ![Product-reviews-no-reviews](/readme_files/validation/reviews/validation-reviews-no-reviews-page-error1.png)
@@ -300,7 +300,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
 * Contact us page
 
-  The HTML validator found Two errors in the contact us page HTML code.
+  The validator found Two errors in the contact us page HTML code.
   
   * Error:
 
@@ -315,7 +315,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
 * Unsubscribe page
 
-  The HTML validator found Two errors in the contact us page HTML code.
+  The validator found Two errors in the contact us page HTML code.
 
   * Error:
 
@@ -327,10 +327,35 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
     ![Unsubscribe-page-no-errors](/readme_files/validation/home/validation-unsubscribe-no-errors.png)
 
+* Product Management page
 
+    The validator found no errors across the product managements templates HTML code.
 
+  * Product management adding a product:
 
+    ![Product-management-add-no-error](/readme_files/validation/product_management/validation-product-management-add-no-errors.png)
+  
+  * Product management deleting a product:
 
+    ![Product-management-delete-no-error](/readme_files/validation/product_management/validation-product-management-delete-no-errors.png)
+
+  * Product management editing a product:
+
+    ![Product-management-edit-no-error](/readme_files/validation/product_management/validation-product-management-edit-no-errors.png)
+
+* My Profile page
+
+  The validator found Two errors in the My profile page HTML code.  
+
+  * Errors:
+
+    ![My-profile-errors](/readme_files/validation/profile/validation-profile-errors.png)
+  
+    * Fix: Added closing "div" tag.
+
+  All validation errors were fixed.
+
+    ![My-profile-no-errors](/readme_files/validation/profile/validation-profile-no-errors.png)
 
 #### 5.1.2 CSS
 
