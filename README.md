@@ -387,10 +387,52 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
     ![checkout-no-errors](/readme_files/validation/checkout/validation-checkout-success-no-errors.png)
 
-  
-
 #### 5.1.2 CSS
+
+  CSS code was validated using W3C CSS validator.
+
+ The validator found no errors in all 3 css files:
+
+* base.css
+* profile.css
+* checkout.css
+
+  ![css-no-errors](/readme_files/validation/css/validation-css-no-errors.png)
 
 #### 5.1.3 JavaScript
 
+  All JavaScript code was validate using jshint. All code was copied into the validator and
+  three lines of code were added at the top of the page to ignore some warnings.
+  
+* /*jshint esversion: 6 */
+  
+* /*globals $:false */
+  
+* /*globals Stripe:false */
+
+  * Tested pages:
+
+    * bag.html
+
+    * stripe_elements.js
+
+    * carousel_script.html
+
+    * products.html
+
+    * on_sale.html
+
+    * countryfields.js
+
+  The validator found six errors.
+
+    ![js-errors](/readme_files/validation/js/validation-js-all-errors.png)
+
+  All errors were fixed.
+
+    ![js-no-errors](/readme_files/validation/js/validation-js-no-errors.png)
+
+
 #### 5.1.4 Python
+
+
