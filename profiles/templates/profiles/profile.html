@@ -29,13 +29,14 @@
     <div class="row">
         <div class="col-12 col-lg-6">
             <h2 class="h5 text-dark font-weight-bold">Delivery Information</h2>
+            <!-- Form -->
             <form action="{% url 'profile' %}" method="post" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy}}
-                <!-- {{ form|crispy }} -->
                 <button class="btn btn-dark-2 hover-white">Update Information</button>
             </form>
         </div>
+        <!-- Order History -->
         <div class="col-12 col-lg-6">
             <h2 class="h5 text-dark font-weight-bold">Order History</h2>
             <table class="table table-sm table-borderless">
@@ -72,12 +73,11 @@
                 </tbody>
             </table>
         </div>
-    </div>
-   
+    </div>   
 
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+    <script src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}

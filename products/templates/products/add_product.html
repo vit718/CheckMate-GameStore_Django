@@ -23,21 +23,18 @@
             <hr>
         </div>
     </div>
-
+    <!-- Form -->
     <div class="row">
         <div class="col-12 col-md-6">
-            <form class="text-dark" action="{% url 'add_product' %}" 
-                method="post" class="form mb-2" enctype="multipart/form-data">
+            <form class="text-dark form mb-2" action="{% url 'add_product' %}" 
+                method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <a class="btn btn-outline-dark">Cancel</a>
                 <button class="btn btn-dark-2 hover-white" type="submit">Add Product</button>
-            </form >
-            
+            </form >            
         </div>
-    </div>
-   
-    
+    </div>    
 </div>
 {% endblock %}
 

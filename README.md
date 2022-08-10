@@ -282,19 +282,19 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
   The HTML validator found four errors in the product reviews page HTML code.
   When the product had no reviews, the following error was found:
 
-  ![Product-reviews-no-reviews](/readme_files/validation/reviews/validation-reviews-no-reviews-page-error1.png)
+    ![Product-reviews-no-reviews](/readme_files/validation/reviews/validation-reviews-no-reviews-page-error1.png)
 
   When trying to leave a new review, the following error was found:
   
-  ![Product-add-new-review](/readme_files/validation/reviews/validation-reviews-add-new-review-page-error1.png)
+    ![Product-add-new-review](/readme_files/validation/reviews/validation-reviews-add-new-review-page-error1.png)
 
   When trying to edit a review, the following error was found:
 
-  ![Product-edit-review-page](/readme_files/validation/reviews/validation-reviews-edit-review-page-error1.png)
+    ![Product-edit-review-page](/readme_files/validation/reviews/validation-reviews-edit-review-page-error1.png)
 
   When deleting a review, the folowing error was found:
 
-  ![Product-delete-review](/readme_files/validation/reviews/validation-reviews-page-delete-error.png)
+    ![Product-delete-review](/readme_files/validation/reviews/validation-reviews-page-delete-error.png)
 
   All validation errors were fixed.
 
@@ -317,11 +317,11 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
   The HTML validator found Two errors in the contact us page HTML code.
 
-* Error:
+  * Error:
 
-  ![Unsubscribe-page-error](/readme_files/validation/home/validation-unsubscribe-error.png)
+    ![Unsubscribe-page-error](/readme_files/validation/home/validation-unsubscribe-error.png)
 
-  * Fix: Removed unclosed "div".
+    * Fix: Removed unclosed "div".
 
   All validation errors were fixed.
 
