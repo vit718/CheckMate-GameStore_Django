@@ -10,7 +10,7 @@ class ProductForm(forms.ModelForm):
         """Gets all fields except avgRating"""
         model = Product
         fields = '__all__'
-        exclude = ('avgRating', 'image_url') 
+        exclude = ('avgRating', 'image_url')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -18,4 +18,3 @@ class ProductForm(forms.ModelForm):
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
         self.fields['category'].choices = friendly_names
-

@@ -16,6 +16,7 @@ from bag.contexts import bag_contents
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 
+
 @require_POST
 def cache_checkout_data(request):
     """ Handle user cache data """
@@ -121,7 +122,7 @@ def checkout(request):
                     'email': profile.user.email,
                     'phone_number': profile.default_phone_number,
                     'street_address1': profile.default_street_address1,
-                    'street_address2': profile.default_street_address2,                    
+                    'street_address2': profile.default_street_address2,
                     'town_or_city': profile.default_town_or_city,
                     'postcode': profile.default_postcode,
                     'county': profile.default_county,
@@ -165,8 +166,8 @@ def checkout_success(request, order_number):
                 'default_phone_number': order.phone_number,
                 'default_street_address1': order.street_address1,
                 'default_street_address2': order.street_address2,
-                'default_town_or_city': order.town_or_city,                
-                'default_postcode': order.postcode,            
+                'default_town_or_city': order.town_or_city,
+                'default_postcode': order.postcode,
                 'default_county': order.county,
                 'default_country': order.country,
             }

@@ -401,7 +401,9 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
 #### 5.1.3 JavaScript
 
-  All JavaScript code was validate using jshint. All code was copied into the validator and
+  All JavaScript code was validate using jshint. 
+  
+  All code was copied into the validator and
   three lines of code were added at the top of the page to ignore some warnings.
   
 * /*jshint esversion: 6 */
@@ -432,7 +434,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
     ![js-no-errors](/readme_files/validation/js/validation-js-no-errors.png)
 
-
 #### 5.1.4 Python
+
 
 

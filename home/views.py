@@ -1,10 +1,11 @@
+"""Imported"""
 from django.shortcuts import render
 from newsletter.forms import SubscriberForm
 
 
 def index(request):
     """ A view to return the index page """
-    
+
     sub_form = SubscriberForm()
 
     context = {

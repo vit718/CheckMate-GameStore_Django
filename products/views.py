@@ -49,7 +49,7 @@ def all_products(request):
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-    
+
     context = {
         'products': products,
         'search_term': query,
@@ -79,13 +79,14 @@ def product_detail(request, product_id):
     # Average rating
     reviews = Review.objects.filter(product=product_id).order_by('-created_at')
     average = reviews.aggregate(Avg("rating"))["rating__avg"]
-    
+
     context = {
         'average': average,
         'product': product,
     }
 
     return render(request, 'products/product_detail.html', context)
+
 
 @login_required
 def add_product(request):
@@ -113,6 +114,7 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_product(request, product_id):
@@ -168,8 +170,7 @@ def delete_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
-    
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')

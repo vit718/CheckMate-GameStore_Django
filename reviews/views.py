@@ -7,8 +7,6 @@ from .models import Product, Review
 from .forms import ReviewForm
 
 
-
-
 def product_reviews(request, product_id):
     """ Display products reviews page """
 
@@ -25,7 +23,6 @@ def product_reviews(request, product_id):
     return render(request, 'reviews/product_reviews.html', context)
 
 
-
 def reviews_form(request, product_id):
     """display reviews form"""
     product = get_object_or_404(Product, pk=product_id)
@@ -33,9 +30,8 @@ def reviews_form(request, product_id):
     context = {
         'product': product,
     }
-    
-    return render(request, 'reviews/reviews_form.html', context)
 
+    return render(request, 'reviews/reviews_form.html', context)
 
 
 @login_required
@@ -109,7 +105,7 @@ def delete_review(request, product_id, review_id):
     if request.method == "POST":
         review.delete()
         messages.success(
-        request, f'You deleted a review for {product.name}'
+            request, f'You deleted a review for {product.name}'
         )
         return redirect(reverse('product_reviews', args=[product.id]))
     else:

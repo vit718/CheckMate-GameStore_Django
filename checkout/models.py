@@ -38,7 +38,7 @@ class Order(models.Model):
         max_digits=10, decimal_places=2,
         null=False, default=0
         )
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2, 
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2,
                                       null=False, default=0)
     original_bag = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(
@@ -102,7 +102,9 @@ class OrderLineItem(models.Model):
         """
         # Add price normal price or price on Sale
         if self.onSale:
-            self.lineitem_total = round(self.product.price_onsale(), 2) * self.quantity
+            self.lineitem_total = round(
+                self.product.price_onsale(), 2
+                ) * self.quantity
             super().save(*args, **kwargs)
         else:
             self.lineitem_total = self.product.price * self.quantity
