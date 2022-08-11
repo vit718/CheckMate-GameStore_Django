@@ -32,10 +32,10 @@ A live website can be found [here](https://marcellomuy-checkmate.herokuapp.com/)
   * [page](#-page)
   * [page](#-page)
 * [Bugs](#bugs)
-[6 Search Engine Optimisation](#6-search-engine-optimisation)
-[7 Marketing](#7-marketing)
-[8 Deployment](#8-deployment)
-[9 Credits](#9-credits)
+* [6 Search Engine Optimisation](#6-search-engine-optimisation)
+* [7 Marketing](#7-marketing)
+* [8 Deployment](#8-deployment)
+* [9 Credits](#9-credits)
 
 ## 1 UX
 
@@ -44,6 +44,8 @@ A live website can be found [here](https://marcellomuy-checkmate.herokuapp.com/)
 As a big fan of board games, I have always looked online when wanting to buy a new game board. This website will showcase a selection of games for the user to buy in a simple-to-use UI.
 
 ### Colour Scheme and Font
+
+[Go to the top](#table-of-contents)
 
 Please find colour scheme used for this project [here](https://coolors.co/002f33-5da3a6-e6f4f1).
 
@@ -55,40 +57,58 @@ The website logo was created using [Canva](https://www.canva.com/) designing too
 
 ### Wireframes
 
+[Go to the top](#table-of-contents)
+
 Mobile and Desktop wireframes were created for some pages of the website.
 
 Due to lack of time, some features fell outside the scope of this project, and wireframes and final project might look different.
 
 #### Home Page
 
+[Go to the top](#table-of-contents)
+
 ![Home](/readme_files/wireframes/wireframe-home.png)
 
 #### Products Page
+
+[Go to the top](#table-of-contents)
 
 ![Products](/readme_files/wireframes/wireframe-products.png)
 
 #### Product Details
 
+[Go to the top](#table-of-contents)
+
 ![Detail](/readme_files/wireframes/wireframe-product-details.png)
 
 #### Shopping Cart
+
+[Go to the top](#table-of-contents)
 
 ![Cart](/readme_files/wireframes/wireframe-cart.png)
 
 #### Checkout Page
 
+[Go to the top](#table-of-contents)
+
 ![Checkout](/readme_files/wireframes/wireframe-checkout.png)
 
 #### Reviews Page
+
+[Go to the top](#table-of-contents)
 
 ![Reviews](/readme_files/wireframes/wireframe-reviews.png)
 
 ### Project Management
 
+[Go to the top](#table-of-contents)
+
 A Kanban board was created on GitHub and was used as a project management tool.
 User stories are divided into 6 EPIC labels.
 
 ### User Stories
+
+[Go to the top](#table-of-contents)
 
 All 29 user stories were implemented.
 
@@ -203,7 +223,11 @@ The following apps have their data models based on the Boutique Ado project.
 
 ## 3 Features
 
+[Go to the top](#table-of-contents)
+
 ### First Phase
+
+[Go to the top](#table-of-contents)
 
 * Navbar
 
@@ -230,13 +254,23 @@ Under the search bar there are 5 links.
 
 ### Second Phase
 
+[Go to the top](#table-of-contents)
+
 ## 4 Technologies Used
+
+[Go to the top](#table-of-contents)
 
 ## 5 Testing
 
+[Go to the top](#table-of-contents)
+
 ### Validation
 
+[Go to the top](#table-of-contents)
+
 #### HTML
+
+[Go to the top](#table-of-contents)
 
 To validate the HTML code, I clicked on "view page source" on the deployed application page that I wanted to inspect and copied the source code into the W3C validator.
 
@@ -414,6 +448,8 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
 #### CSS
 
+[Go to the top](#table-of-contents)
+
   CSS code was validated using W3C CSS validator.
 
  The validator found no errors in all 3 css files:
@@ -426,7 +462,9 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
 #### JavaScript
 
-  All JavaScript code was validate using jshint. 
+[Go to the top](#table-of-contents)
+
+  All JavaScript code was validate using jshint.
   
   All code was copied into the validator and
   three lines of code were added at the top of the page to ignore some warnings.
@@ -460,6 +498,8 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
     ![js-no-errors](/readme_files/validation/js/validation-js-no-errors.png)
 
 #### Python
+
+[Go to the top](#table-of-contents)
 
   The Python code was checked using the command "python3 -m flake8" in Gitpod.
 
