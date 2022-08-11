@@ -9,35 +9,37 @@ A live website can be found [here](https://marcellomuy-checkmate.herokuapp.com/)
 
 ## Table of Contents
 
-1. [UX](#ux)
-    * [Colour Scheme and Font](#colour-scheme-and-font)
-    * [Wireframes](#wireframes)
-    * [Project Management](#project-management)
-    * [User Stories](#user-stories)
-2. [Data Models](#data-models)
-3. [Features](#features)
-    * [First Phase](#first-phase)
-    * [Second Phase](#second-phase)
-4. [Technologies Used](#technologies-used)
-5. [Testing](#testing)
-    * [Validation](#validation)
-        * [HTML](#html)
-        * [CSS](#css)
-        * [JaveScript](#javascript)
-        * [Python](#python)
-    * [Manual Testing](#user-story-testing)
-        * [Home page](#home-page)
-    * [Bugs](#bugs)
-6. [Search Engine Optimisation](#search-engine-optimisation)
-7. [Marketing](#marketing)
-8. [Deployment](#deployment)
-9. [Credits](#credits)
+[1 UX](#ux)
+    *[Colour Scheme and Font](#colour-scheme-and-font)
+    *[Wireframes](#wireframes)
+    *[Project Management](#project-management)
+    *[User Stories](#user-stories)
+[2 Data Models](#data-models)
+[3 Features](#features)
+    *[First Phase](#first-phase)
+    *[Second Phase](#second-phase)
+[4 Technologies Used](#technologies-used)
+[5 Testing](#testing)
+    *[Validation](#validation)
+        *[HTML](#html)
+        *[CSS](#css)
+        *[JaveScript](#javascript)
+        *[Python](#python)
+    *[Manual Testing](#user-story-testing)
+        *[Home page](#home-page)
+    *[Bugs](#bugs)
+[6 Search Engine Optimisation](#search-engine-optimisation)
+[7 Marketing](#marketing)
+[8 Deployment](#deployment)
+[9 Credits](#credits)
 
-## 1. Ux
+## 1 UX
+
+[Go to the top](#table-of-contents)
 
 As a big fan of board games, I have always looked online when wanting to buy a new game board. This website will showcase a selection of games for the user to buy in a simple-to-use UI.
 
-### 1.1 Colour Scheme and Font
+### Colour Scheme and Font
 
 Please find colour scheme used for this project [here](https://coolors.co/002f33-5da3a6-e6f4f1).
 
@@ -47,7 +49,7 @@ The website logo was created using [Canva](https://www.canva.com/) designing too
 
 ![Logo](/media/logo.png)
 
-### 1.2 Wireframes
+### Wireframes
 
 Mobile and Desktop wireframes were created for some pages of the website.
 
@@ -77,12 +79,12 @@ Due to lack of time, some features fell outside the scope of this project, and w
 
 ![Reviews](/readme_files/wireframes/wireframe-reviews.png)
 
-### 1.3 Project Management
+### Project Management
 
 A Kanban board was created on GitHub and was used as a project management tool.
 User stories are divided into 6 EPIC labels.
 
-### 1.4 User Stories
+### User Stories
 
 All 29 user stories were implemented.
 
@@ -110,9 +112,26 @@ All 29 user stories were implemented.
 
 ![Interacting](/readme_files/user-stories/user-story-interacting.png)
 
-## 2. Data Models
+## 2 Data Models
+
+[Go to the top](#table-of-contents)
 
 Data models used in this project:
+
+* Contact app
+
+```python
+class ContactMessage(models.Model):
+    """Class for contact us model"""
+    name = models.CharField(max_length=200)
+    email = models.EmailField(max_length=200)
+    subject = models.CharField(max_length=200)
+    message = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name + "-" + self.email
+```
 
 * Products app
 
@@ -178,9 +197,9 @@ The following apps have their data models based on the Boutique Ado project.
 * checkout app
 * profiles app
 
-## 3. Features
+## 3 Features
 
-### 3.1 First Phase
+### First Phase
 
 * Navbar
 
@@ -205,13 +224,15 @@ Under the search bar there are 5 links.
 
 * (On sale), a link to the "on sale" page.
 
-### 3.2 Second Phase
+### Second Phase
+
+## 4 Technologies Used
 
 ## 5 Testing
 
-### 5.1 Validation
+### Validation
 
-#### 5.1.1 HTML
+#### HTML
 
 To validate the HTML code, I clicked on "view page source" on the deployed application page that I wanted to inspect and copied the source code into the W3C validator.
 
@@ -387,7 +408,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
     ![checkout-no-errors](/readme_files/validation/checkout/validation-checkout-success-no-errors.png)
 
-#### 5.1.2 CSS
+#### CSS
 
   CSS code was validated using W3C CSS validator.
 
@@ -399,7 +420,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
   ![css-no-errors](/readme_files/validation/css/validation-css-no-errors.png)
 
-#### 5.1.3 JavaScript
+#### JavaScript
 
   All JavaScript code was validate using jshint. 
   
@@ -434,7 +455,7 @@ To validate the HTML code, I clicked on "view page source" on the deployed appli
 
     ![js-no-errors](/readme_files/validation/js/validation-js-no-errors.png)
 
-#### 5.1.4 Python
+#### Python
 
   The Python code was checked using the command "python3 -m flake8" in Gitpod.
 
