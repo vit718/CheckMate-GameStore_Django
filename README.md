@@ -229,22 +229,20 @@ The following apps have their data models based on the Boutique Ado project.
   
   All links throughout the website pages will be highlighted in a darker tone when hovered.
 
-  ![Buttons](/readme_files/features/all_pages/features-buttons.png)
-
   Action buttons like "SHOP NOW", "PROCEED TO CHECKOUT" AND "ADD TO CART" have a dark green background colour and display the HTML text in white when hovered.
 
   Go back buttons like "CANCEL" and "KEEP SHOPPING" have the background colour white with a dark green text and border. Its background colour will change to dark green and text into white when hovered.
+
+  ![Buttons](/readme_files/features/all_pages/features-buttons.png)
+
+  An alert will appear at the top right of the page every time the user interacts with the webpage.
 
   ![Alert-success](/readme_files/features/all_pages/features-alerts-success.png)
   ![Alert-success2](/readme_files/features/all_pages/features-alerts-success2.png)
   ![Alert-error](/readme_files/features/all_pages/features-alerts-error.png)
 
-  An alert will appear at the top right of the page every time the user interacts with the webpage.
-
 * Navbar
   * Desktop
-
-    ![Navbar](/readme_files/features/features-navbar.png)
 
   On the left, The navigation bar contains the site logo and a link to the home page.
 
@@ -265,25 +263,24 @@ The following apps have their data models based on the Boutique Ado project.
     * (Role-Playing), dropdown with options for (dungeons & dragons and pathfinder) and "all role-playing" games.
 
     * (On sale), a link to the "on sale" page.
-  
+
+    ![Navbar](/readme_files/features/navbar/features-navbar.png)
+
   * Mobile
   
-    ![Navbar-mobile](/readme_files/features/navbar/features-navbar-mobile.png)
-    ![Navbar-mobile](/readme_files/features/navbar/features-navbar-mobile-dropdown.png)
-    ![Navbar-mobile](/readme_files/features/navbar/features-navbar-mobile-search.png)
-
     The logo is removed on the mobile version, and a hamburger icon is placed at the left of the navbar.
 
     When the hamburguer icon is clicked on, a dropdown menu shows all the navigation links.
 
     The search bar is also hidden in the mobile version and is only displayed when the user clicks on the search icon.
 
+    ![Navbar-mobile](/readme_files/features/navbar/features-navbar-mobile.png)
+    ![Navbar-mobile](/readme_files/features/navbar/features-navbar-mobile-dropdown.png)
+    ![Navbar-mobile](/readme_files/features/navbar/features-navbar-mobile-search.png)
+
 * Footer
   
   * Desktop and mobile
-
-    ![Footer](/readme_files/features/footer/features-footer.png)
-    ![Footer](/readme_files/features/footer/features-footer-mobile.png)
 
     On the left side of the footer, you will find a link to the privacy policy page and just under it, a link to the "contact us" page.
 
@@ -291,11 +288,46 @@ The following apps have their data models based on the Boutique Ado project.
 
     The content of the footer is in a smaller font size in the mobile version.
 
+    ![Footer](/readme_files/features/footer/features-footer.png)
+    ![Footer](/readme_files/features/footer/features-footer-mobile.png)
+
 * Home page
 
+  The home page has a background image and a bootstrap carousel with three carousel items.
+  
+  The carousel will slide indefinitely every 20 seconds but will stop when hovered.
 
+  The user can control the carousel by clicking on the white arrows of the carousel or at the white lines under it.
 
+  Each line represents one of the carousel items and is highlighted when the correspondent carousel is displayed.
 
+  * First item:
+
+    In the first carousel item, you will find the main page headings.
+
+    Under the headings, a "SHOP NOW" button, when clicked on, directs the user to the "all products" page.
+
+    A slide effect was added to the headings and the button, making them appear in sequence after each other.
+
+    ![Home-carousel-1](/readme_files/features/home/features-home-carousel-1.png)
+
+  * Second item:
+
+    In the second carousel item, a flash sale image directs the user to the "on sale" page when clicked on.
+
+    ![Home-carousel-2](/readme_files/features/home/features-home-carousel-2.png)
+
+  * Third item:
+
+    In the third carousel item, there is the form for subscribing to the newsletter with a subscribe button below.
+
+    The user has to type an email address and check a confirmation box.
+
+    The form will only be submitted after checking the box.
+
+    Under the form, there is a link highlighted in red. When clicked on, it directs the user to the unsubscribing page.
+
+    ![Home-carousel-3](/readme_files/features/home/features-home-carousel-3.png)
 
 ## 4 Technologies Used
 
