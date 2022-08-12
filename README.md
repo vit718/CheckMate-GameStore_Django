@@ -227,7 +227,19 @@ The following apps have their data models based on the Boutique Ado project.
 
 * All pages
   
-  All links throughout the website pages will be highlighted in a darker tone and hovered.
+  All links throughout the website pages will be highlighted in a darker tone when hovered.
+
+  ![Buttons](/readme_files/features/all_pages/features-buttons.png)
+
+  Action buttons like "SHOP NOW", "PROCEED TO CHECKOUT" AND "ADD TO CART" have a dark green background colour and display the HTML text in white when hovered.
+
+  Go back buttons like "CANCEL" and "KEEP SHOPPING" have the background colour white with a dark green text and border. Its background colour will change to dark green and text into white when hovered.
+
+  ![Alert-success](/readme_files/features/all_pages/features-alerts-success.png)
+  ![Alert-success2](/readme_files/features/all_pages/features-alerts-success2.png)
+  ![Alert-error](/readme_files/features/all_pages/features-alerts-error.png)
+
+  An alert will appear at the top right of the page every time the user interacts with the webpage.
 
 * Navbar
   * Desktop
