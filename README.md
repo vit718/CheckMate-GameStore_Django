@@ -18,8 +18,8 @@ A live website can be found [here](https://marcellomuy-checkmate.herokuapp.com/)
 * [3 Features](#3-features)
   * [First Phase](#first-phase)
   * [Second Phase](#second-phase)
-[4 Technologies Used](#4-technologies-used)
-[5 Testing](#5-testing)
+* [4 Technologies Used](#4-technologies-used)
+* [5 Testing](#5-testing)
 * [Validation](#validation)
   * [HTML](#html)
   * [CSS](#css)
@@ -222,8 +222,6 @@ The following apps have their data models based on the Boutique Ado project.
 * profiles app
 
 ## 3 Features
-
-[Go to the top](#table-of-contents)
 
 ### First Phase
 
