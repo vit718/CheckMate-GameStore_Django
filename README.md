@@ -19,6 +19,7 @@ A live website can be found [here](https://marcellomuy-checkmate.herokuapp.com/)
   * [Project Management](#project-management)
   * [User Stories](#user-stories)
 * [2 Data Models](#2-data-models)
+  * [Models ERD](#models-erd)
 * [3 Features](#3-features)
   * [All Pages](#all-pages)
   * [Navbar](#Navbar)
@@ -234,6 +235,12 @@ The following apps have their data models based on the Boutique Ado project.
 * bag app
 * checkout app
 * profiles app
+
+### Models ERD
+
+This diagram was automatic generated using django_extensions and Graphviz:
+
+[Click here](/readme_files/models-diagram.png) to open the diagram.
 
 ## 3 Features
 
