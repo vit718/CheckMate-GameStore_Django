@@ -16,8 +16,19 @@ A live website can be found [here](https://marcellomuy-checkmate.herokuapp.com/)
   * [User Stories](#user-stories)
 * [2 Data Models](#2-data-models)
 * [3 Features](#3-features)
-  * [First Phase](#first-phase)
-  * [Second Phase](#second-phase)
+  * [All Pages](#all-pages)
+  * [Navbar](#Navbar)
+  * [Footer](#Footer)
+  * [Home Page Features](#home-page-features)
+  * [Contact Us Page](#contact-us-page)
+  * [All Products Page](#all-product-page)
+  * [Product Detail Page](#poduct-details-page)
+  * [On Sale Page](#on-sale-page)
+  * [Reviews Page Features](#reviews-page-features)
+  * [Product Managemnet Page](#product-management-page)
+  * [Shopping Cart Page](#shopping-cart-page)
+  * [Checkout Page Features](#checkout-page-features)
+  * [Sign in/out Page](#sign-in/out-page)
 * [4 Technologies Used](#4-technologies-used)
 * [5 Testing](#5-testing)
   * [Validation](#validation)
@@ -26,11 +37,6 @@ A live website can be found [here](https://marcellomuy-checkmate.herokuapp.com/)
     * [JaveScript](#javascript)
     * [Python](#python)
   * [Manual Testing](#manual-testing)
-    * [Home page](#home-page)
-    * [page](#-page)
-    * [page](#-page)
-    * [page](#-page)
-    * [page](#-page)
   * [Bugs](#bugs)
 * [6 Search Engine Optimisation](#6-search-engine-optimisation)
 * [7 Marketing](#7-marketing)
@@ -223,10 +229,10 @@ The following apps have their data models based on the Boutique Ado project.
 
 ## 3 Features
 
-[Go to the top](#table-of-contents)
-
-* All pages
+### All pages
   
+  [Go to the top](#table-of-contents)
+
   All links throughout the website pages will be highlighted in a darker tone when hovered.
 
   Action buttons like "SHOP NOW", "PROCEED TO CHECKOUT" AND "ADD TO CART" have a dark green background colour and display the HTML text in white when hovered.
@@ -241,8 +247,11 @@ The following apps have their data models based on the Boutique Ado project.
   ![Alert-success2](/readme_files/features/all_pages/features-alerts-success2.png)
   ![Alert-error](/readme_files/features/all_pages/features-alerts-error.png)
 
-* Navbar
-  * Desktop
+### Navbar
+  
+  [Go to the top](#table-of-contents)
+
+* Desktop
 
   On the left, The navigation bar contains the site logo and a link to the home page.
 
@@ -278,9 +287,9 @@ The following apps have their data models based on the Boutique Ado project.
     ![Navbar-mobile](/readme_files/features/navbar/features-navbar-mobile-dropdown.png)
     ![Navbar-mobile](/readme_files/features/navbar/features-navbar-mobile-search.png)
 
-* Footer
+### Footer
   
-  * Desktop and mobile
+* Desktop and mobile
 
     On the left side of the footer, you will find a link to the privacy policy page and just under it, a link to the "contact us" page.
 
@@ -291,7 +300,7 @@ The following apps have their data models based on the Boutique Ado project.
     ![Footer](/readme_files/features/footer/features-footer.png)
     ![Footer](/readme_files/features/footer/features-footer-mobile.png)
 
-* Home page
+### Home page
 
   The home page has a background image and a bootstrap carousel with three carousel items.
   
@@ -301,7 +310,7 @@ The following apps have their data models based on the Boutique Ado project.
 
   Each line represents one of the carousel items and is highlighted when the correspondent carousel is displayed.
 
-  * First item:
+* First item:
 
     In the first carousel item, you will find the main page headings.
 
@@ -329,9 +338,232 @@ The following apps have their data models based on the Boutique Ado project.
 
     ![Home-carousel-3](/readme_files/features/home/features-home-carousel-3.png)
 
+    ![Unsubscribe](/readme_files/features/home/features-unsubscribe.png)
+
+### Contact Us page
+
+  The Contact page has a white background, four input fields and a submit button.
+  
+  All fields are required fields.
+
+  ![Contact-us](/readme_files/features/contact/features-contact.png)
+
+### All Products Page
+
+  The products page can be filtered by category by clicking on the navigation links in the navbar.
+
+  If a category is selected, a badge with the category name is displayed below the product heading.
+
+![Products-category](/readme_files/features/products/features-all-products-category.png)
+
+  At the top left of the page, you will see the total number of products, and at the top right, you can sort products by price or alphabetically.
+
+  The number of products per row will differ depending on the screen size.
+
+  The Product name and image will redirect the user to the product details page when clicked.
+
+  Beside the image or below it, if displayed on an extra small screen, you will find the product card.
+  
+  At the top of the card, you will find the product's name.
+
+  Under the name are icons with information regarding the minimum age, min and max number of players, and the average time to play.
+  
+  If the product is on sale, the price is displayed in red with the old price crossed and faded.
+  
+  ![Products-price-red](/readme_files/features/products/features-all-products-price-red.png)
+
+  An "ADD TO CART" button is placed at the bottom of the card and, when clicked on, will add one item to the cart.
+  
+  At the bottom right, there is an arrow-up icon that brings the user back to the top of the page when clicked. The arrow has an absolute position and is always visible.
+  
+  Large:
+
+  ![Products-large](/readme_files/features/products/features-all-products-l.png)
+
+  Medium:
+
+  ![Products-medium](/readme_files/features/products/features-all-products-m.png)
+
+  Small:
+
+  ![Products-small](/readme_files/features/products/features-all-products-s.png)
+
+  Extra Small:
+
+  ![Products-extra-small](/readme_files/features/products/features-all-products-xs.png)
+
+### Products Details page
+
+[Go to the top](#table-of-contents)
+
+  On the products details page, there is a large product image.
+  
+  The product card has all the product information shown on the "all products" page plus four more items:
+
+* Reviews:
+
+    A yellow star icon is located beside the average rating for the product.
+
+    If the product has no reviews, a "no reviews" text is displayed instead
+
+    A reviews link can be found beside the average rating and redirects the user to the reviews page when clicked.
+
+* Description:
+  
+    It contains a description of the product.
+
+* Edit and delete:
+
+    If the user is a superuser, an "edit" and "delete" button is displayed under the quantity field.
+
+    The edit button redirects to a pre-populated product management page, and the "delete" button redirects to the "confirm delete" page.
+
+    ![Product-management-populated](/readme_files/features/product_details/features-management-populated.png)
+
+    ![Product-details-delete-page](/readme_files/features/product_details/features-product-details-delete-page.png)
+
+* Quantity:
+  
+    On this page, the user can select the quantity to be added to the shopping cart.
+
+  ![Product-details](/readme_files/features/product_details/features-product-details.png)
+  ![Product-details-reviews](/readme_files/features/product_details/features-product-details-reviews.png)
+  ![Product-details-edit-delete](/readme_files/features/product_details/features-product-details-edit-delete.png)
+
+### On Sale page
+
+[Go to the top](#table-of-contents)
+
+  The On sale page will display all the products that are marked as "on sale".
+  
+  Products can be marked as on sale through the "product management" page or the "admin" page.
+
+  ![Product-on-sale](/readme_files/features/on_sale/features-on-sale-page.png)
+
+### Reviews page
+
+[Go to the top](#table-of-contents)
+
+  A container with the reviews is displayed on the "product reviews" page if the products have any reviews.
+
+  If the user is the author of the review, links for edit and delete are displayed otherwise, these links are hidden.
+
+  ![Product-reviews](/readme_files/features/reviews/features-product-reviews-page.png)
+
+  The "edit" button will load a pre-populated form.
+
+  ![Product-reviews-edit](/readme_files/features/reviews/features-reviews-edit.png)
+
+  The "delete" button will load a delete confirmation page.
+
+  ![Product-reviews-delete](/readme_files/features/reviews/features-reviews-delete.png)
+
+  The "LEAVE A REVIEW" button will redirect the user to the "Add a Review" page, where a form with fields for comment and rating is displayed.
+
+  ![Product-reviews-add](/readme_files/features/reviews/features-reviews-add.png)
+
+  When submitted, the form will redirect the user back to the reviews page.
+
+### Product management page
+
+[Go to the top](#table-of-contents)
+
+  A "super user" can add new products on the product management page.
+
+  ![management-page](/readme_files/features/management/features-management.png)
+
+### Shopping Cart page
+
+[Go to the top](#table-of-contents)
+
+  On the shopping cart page, the user can visualize all products inside the cart, update the quantity and delete the product entirely from it.
+
+  ![Shopping-cart-page](/readme_files/features/shopping_cart/features-cart.png)
+
+  When the cart is empty this page will load.
+  
+  ![Shopping-cart-empty](/readme_files/features/shopping_cart/features-cart-empty.png)
+
+  At the bottom of the page, you will find the total price and delivery fee to be paid.
+  
+  The delivery fee is 10% of the subtotal price.
+
+  When spending more than 50 euros, the delivery fee is free.
+  
+  ![Shopping-cart-price](/readme_files/features/shopping_cart/features-cart-price.png)
+
+### Checkout page
+
+[Go to the top](#table-of-contents)
+
+  On the checkout page, there is a form for the payment information.
+
+  The order summary is shown on the right side of the page.
+
+  ![Checkout-page](/readme_files/features/checkout/features-checkout.png)
+
+  Clicking the complete order button will create the order, complete the payment transaction and load the "checkout_success" page.
+  
+  An email is sent to the registerer email confirming the purchase.
+  
+  Clicking the button at the bottom of the page will redirect the user to the "on sale" page.
+
+  ![Checkout-page-success](/readme_files/features/checkout/features-checkout-success.png)
+
+  ![Checkout-page-email](/readme_files/features/checkout/features-checkout-email.png)
+
+### Authentication
+
+[Go to the top](#table-of-contents)
+
+  The user can register for an account.
+  
+  ![Register](/readme_files/features/authentication/features-register.png)
+
+  Sign in and Sign out.
+
+  ![Sign-in](/readme_files/features/authentication/features-sign-in.png)
+  ![Sign-out](/readme_files/features/authentication/features-sign-out.png)
+
 ## 4 Technologies Used
 
 [Go to the top](#table-of-contents)
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML)
+  The project uses HyperText Markup Language.
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+  The project uses Cascading Style Sheets.
+* [Django 3.2](https://en.wikipedia.org/wiki/Django_(web_framework))
+  Django was used as the web framework to develop this project.
+  Below you can find the Django libraries and packages used in this project.
+* [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+  Library used for authentication and registration
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+  The project uses JavaScript.
+* [Python 3](https://en.wikipedia.org/wiki/Python_(programming_language))
+  The project uses Python.
+* [Boostrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+  The project uses Bootstrap 4.6.
+* [PostgreSQL](https://www.postgresql.org/)
+  The project uses PostgreSQL as a database.
+* [Gitpod](https://www.gitpod.io/)
+  The project uses Gitpod.
+* [Chrome Developer tools](https://www.google.com/intl/en_uk/chrome/)
+  Chrome was used to debug and test the project's source code.
+* [Balsamiq](https://balsamiq.com/)
+  Balsamiq was used to create the wireframes during the design process.
+* [Canva](https://en.wikipedia.org/wiki/Canva)
+  Canva was used to create the website logo and the flash sale image.
+* [Google Fonts](https://fonts.google.com/)
+  Google fonts were used to import the "Roboto flex" font into the style.css file which is used on all pages throughout the project.
+* [Heroku](https://en.wikipedia.org/wiki/Heroku)
+  Heroku was useed as a cloud platform service for this project.
+* [AWS](https://aws.amazon.com/)
+  Used to store the stactic and media files of this project.
+* [Stripe](https://stripe.com/ie)
+  Payments are processed using Stripe.
+* [GitHub](https://github.com/)
+  GitHub was used to store the project's code after being pushed from Git.
 
 ## 5 Testing
 
@@ -619,3 +851,70 @@ Autogenerated files were not validated.
     Social Link | When clicked, it opens a new page with the CheckMate Facebook business account. | PASS
     Privacy Policy | When clicked, it opens a new page with the Privacy Policy for CheckMate Game Store. | PASS
     Contact Us | When clicked, it redirects the user to the "contact us" page. | PASS
+
+* Home page
+
+    TEST            | OUTCOME                          | PASS / FAIL  
+    --------------- | -------------------------------- | ---------------
+    Carousel | The Carousel controls work as expected. | PASS
+    SHOP NOW button | The "SHOP NOW" button redirects the user to the "all products" page. | PASS
+    On sale image | When clicked, the "on sale" image redirects the user to the "on sale" page. | PASS
+    Newsletter | Subscribe form only accepts a valid email address. | PASS
+    Newsletter check box | The form is submitted only if the check box is checked. | PASS
+    SUBSCRIBE button | The "SUBSCRIBE" button submits the form. | PASS
+    Unsubscribe | The link to the unsubscribe page redirects the user to the right page. | PASS
+
+* Contact Us page
+
+    TEST            | OUTCOME                          | PASS / FAIL  
+    --------------- | -------------------------------- | ---------------
+    Input Fields | Form will only be submitted when all fields were filed. | PASS
+    Email field | Form will only be submitted when a valid email address is used. | PASS
+
+* Products page
+
+  TEST            | OUTCOME                          | PASS / FAIL  
+  --------------- | -------------------------------- | ---------------
+  Image | Products are displayed in the correct format depending on the screen size. | PASS
+  Card information| Information on the card corresponds to the related product image | PASS
+  Links | Image and product name redirect the user to the "product details" page when clicked. | PASS
+  "ADD TO CART" button | When clicked on, adds one item to the shopping cart. | PASS
+  Sorting | Alphabetcaly sorting returns the expected result. | PASS
+  Sorting | Sorting by price returns the expected result. | FAIL
+
+    (Sorting by price produces the correct output but doesn't consider if the product has a reduced price on, resulting in the full price being used for sorting.)
+
+* Products Details page
+
+  TEST            | OUTCOME                          | PASS / FAIL  
+  --------------- | -------------------------------- | ---------------
+
+* On Sale page
+
+  TEST            | OUTCOME                          | PASS / FAIL  
+  --------------- | -------------------------------- | ---------------
+
+* Reviews page
+
+  TEST            | OUTCOME                          | PASS / FAIL  
+  --------------- | -------------------------------- | ---------------
+
+* Product management page
+
+  TEST            | OUTCOME                          | PASS / FAIL  
+  --------------- | -------------------------------- | ---------------
+
+* Shopping Cart page
+
+  TEST            | OUTCOME                          | PASS / FAIL  
+  --------------- | -------------------------------- | ---------------
+
+* Checkout page
+
+  TEST            | OUTCOME                          | PASS / FAIL  
+  --------------- | -------------------------------- | ---------------
+
+* Sign in/out page
+
+  TEST            | OUTCOME                          | PASS / FAIL  
+  --------------- | -------------------------------- | ---------------
