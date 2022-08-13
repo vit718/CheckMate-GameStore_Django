@@ -1105,6 +1105,28 @@ If necessary, keywords can be added or removed to keep improving the website's S
 
 ## 7 Marketing
 
+* Social Media:
+
+  * Facebook:
+  
+    For the marketing strategy, I created a Facebook account where weekly posts to promote discounted products are posted.
+
+    Other examples of posts would be a post when a new game is added to the website or sharing articles related to the board game scene.
+
+    With a small investment, the Facebook page can be promoted on Facebook to increase the page's reach.
+
+    ![facebook-page1](/readme_files/facebook-page1.png)
+    ![facebook-page2](/readme_files/facebook-page2.png)
+
+  * Tiktok:
+    Another marketing strategy would be making short videos about specific products and promoting them on TikTok.
+
+* Email Marketing:
+
+    Having a newsletter is a free form of marketing and will keep subscribed customers updated about the ongoing sales and new products.
+
+    Sending discounted codes through the newsletter will make subscribed customers more likely to complete a purchase, increasing sales numbers.
+
 ## 8 Deployment
 
 Running the project locally:
