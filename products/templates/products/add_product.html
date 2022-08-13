@@ -30,7 +30,7 @@
                 method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <a class="btn btn-outline-dark">Cancel</a>
+                <a href="{% url 'home' %}" class="btn btn-outline-dark">Cancel</a>
                 <button class="btn btn-dark-2 hover-white" type="submit">Add Product</button>
             </form >            
         </div>
