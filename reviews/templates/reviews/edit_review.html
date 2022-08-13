@@ -41,7 +41,7 @@
         </div>
         <!-- Reviews form -->
         <div class="col-10 col-lg-6 mx-auto text-center">
-            <form action="{% url 'product_reviews' product.id %}" method="POST">
+            <form action="{% url 'edit_review' product.id review.id %}" method="POST">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <a href="{% url 'product_reviews' product.id %}" class="btn btn-outline-dark mt-3">
