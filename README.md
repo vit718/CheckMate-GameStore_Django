@@ -5,7 +5,7 @@ This project uses the Django framework, HTML, Python, CSS and JavaScript.
 
 In this project, I set up an authentication system and provided access to the site's data for users to purchase various products.
 
-CRUD functionality (Create, Read, Update, Delete) is implemented in the Reviews page, products management page, and the Admin section of the project.
+CRUD functionality (Create, Read, Update, Delete) is implemented in the Reviews page, Products Management page, Cart page and the Admin section of the project.
 
 A live website can be found [here](https://marcellomuy-checkmate.herokuapp.com/).
 
@@ -415,6 +415,8 @@ This diagram was automatic generated using django_extensions and Graphviz:
   
   The product card has all the product information shown on the "all products" page plus four more items:
 
+![Product-details](/readme_files/features/product_details/features-product-details.png)
+
 * Reviews:
 
     A yellow star icon is located beside the average rating for the product.
@@ -422,6 +424,8 @@ This diagram was automatic generated using django_extensions and Graphviz:
     If the product has no reviews, a "no reviews" text is displayed instead
 
     A reviews link can be found beside the average rating and redirects the user to the reviews page when clicked.
+
+![Product-details-reviews](/readme_files/features/product_details/features-product-details-reviews.png)
 
 * Description:
   
@@ -441,8 +445,6 @@ This diagram was automatic generated using django_extensions and Graphviz:
   
     On this page, the user can select the quantity to be added to the shopping cart.
 
-  ![Product-details](/readme_files/features/product_details/features-product-details.png)
-  ![Product-details-reviews](/readme_files/features/product_details/features-product-details-reviews.png)
   ![Product-details-edit-delete](/readme_files/features/product_details/features-product-details-edit-delete.png)
 
 ### On Sale page
